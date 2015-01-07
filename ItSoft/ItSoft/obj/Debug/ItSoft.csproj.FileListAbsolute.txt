@@ -1,0 +1,10 @@
+c:\users\george\documents\visual studio 2013\Projects\ItSoft\ItSoft\bin\Debug\ItSoft.exe.config
+c:\users\george\documents\visual studio 2013\Projects\ItSoft\ItSoft\bin\Debug\ItSoft.exe
+c:\users\george\documents\visual studio 2013\Projects\ItSoft\ItSoft\bin\Debug\ItSoft.pdb
+c:\users\george\documents\visual studio 2013\Projects\ItSoft\ItSoft\obj\Debug\ItSoft.csprojResolveAssemblyReference.cache
+c:\users\george\documents\visual studio 2013\Projects\ItSoft\ItSoft\obj\Debug\ItSoft.StartForm.resources
+c:\users\george\documents\visual studio 2013\Projects\ItSoft\ItSoft\obj\Debug\ItSoft.Properties.Resources.resources
+c:\users\george\documents\visual studio 2013\Projects\ItSoft\ItSoft\obj\Debug\ItSoft.csproj.GenerateResource.Cache
+c:\users\george\documents\visual studio 2013\Projects\ItSoft\ItSoft\obj\Debug\ItSoft.exe
+c:\users\george\documents\visual studio 2013\Projects\ItSoft\ItSoft\obj\Debug\ItSoft.pdb
+c:\users\george\documents\visual studio 2013\Projects\ItSoft\ItSoft\obj\Debug\ItSoft.FormNewEmplo.resources
