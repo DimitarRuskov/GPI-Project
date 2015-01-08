@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
@@ -52,7 +45,7 @@ namespace ItSoft
 
             const string sPath = "employees.txt";
 
-            string employee = egn + "%" + name + "%" + middleName + "%" + familyName + "%" + profession + "%" + department + "%" + payment + "%" + date;
+            string employee = egn + "%" + name + "%" + middleName + "%" + familyName + "%" + profession + "%" + department + "%" + payment + "%" + dateTimePicker1;
             //File.AppendAllText(sPath, employee);
             TextWriter tw = new StreamWriter(sPath, true);
             tw.WriteLine(employee);
@@ -64,12 +57,7 @@ namespace ItSoft
             MessageBox.Show("Employee saved!");
         }
 
-        private void textBoxDateOfStart_TextChanged(object sender, EventArgs e)
-        {
-            var picker = new DateTimePicker();
-            Form f = new Form();
-            f.Controls.Add(picker);
-        }
+   
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -121,6 +109,19 @@ namespace ItSoft
 
                 MessageBox.Show("Въведете коректно ИМЕ !");
             }
+        }
+
+
+
+        private void textBoxDateOfStart_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
+        {
+ DateTime date = this.dateTimePicker1.Value;
+            this.textBoxDateOfStart.Text = date.ToString();
         }
     }
 }

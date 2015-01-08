@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.startDateText = new System.Windows.Forms.MonthCalendar();
             this.paymentText = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.departmentText = new System.Windows.Forms.ComboBox();
@@ -44,16 +43,12 @@
             this.egnText = new System.Windows.Forms.TextBox();
             this.ЕГН = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
-            this.textBoxDateOfStart = new System.Windows.Forms.TextBox();
             this.LabelDateOfStart = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.startDateText = new System.Windows.Forms.MonthCalendar();
+            this.textBoxDateOfStart = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // startDateText
-            // 
-            this.startDateText.Location = new System.Drawing.Point(323, 47);
-            this.startDateText.Name = "startDateText";
-            this.startDateText.TabIndex = 30;
             // 
             // paymentText
             // 
@@ -207,14 +202,6 @@
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
-            // textBoxDateOfStart
-            // 
-            this.textBoxDateOfStart.Location = new System.Drawing.Point(84, 449);
-            this.textBoxDateOfStart.Name = "textBoxDateOfStart";
-            this.textBoxDateOfStart.Size = new System.Drawing.Size(188, 20);
-            this.textBoxDateOfStart.TabIndex = 33;
-            this.textBoxDateOfStart.TextChanged += new System.EventHandler(this.textBoxDateOfStart_TextChanged);
-            // 
             // LabelDateOfStart
             // 
             this.LabelDateOfStart.AutoSize = true;
@@ -236,11 +223,34 @@
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(80, 459);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(188, 20);
+            this.dateTimePicker1.TabIndex = 35;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
+            // 
+            // startDateText
+            // 
+            this.startDateText.Location = new System.Drawing.Point(323, 47);
+            this.startDateText.Name = "startDateText";
+            this.startDateText.TabIndex = 30;
+            // 
+            // textBoxDateOfStart
+            // 
+            this.textBoxDateOfStart.Location = new System.Drawing.Point(80, 497);
+            this.textBoxDateOfStart.Name = "textBoxDateOfStart";
+            this.textBoxDateOfStart.Size = new System.Drawing.Size(188, 20);
+            this.textBoxDateOfStart.TabIndex = 33;
+            this.textBoxDateOfStart.TextChanged += new System.EventHandler(this.textBoxDateOfStart_TextChanged);
+            // 
             // FormNewEmplo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 544);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.textBoxDateOfStart);
             this.Controls.Add(this.LabelDateOfStart);
@@ -270,7 +280,6 @@
 
         #endregion
 
-        private System.Windows.Forms.MonthCalendar startDateText;
         private System.Windows.Forms.TextBox paymentText;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox departmentText;
@@ -286,8 +295,10 @@
         private System.Windows.Forms.TextBox egnText;
         private System.Windows.Forms.Label ЕГН;
         private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.TextBox textBoxDateOfStart;
         private System.Windows.Forms.Label LabelDateOfStart;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.MonthCalendar startDateText;
+        private System.Windows.Forms.TextBox textBoxDateOfStart;
     }
 }
