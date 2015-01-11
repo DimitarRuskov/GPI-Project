@@ -45,7 +45,7 @@ namespace ItSoft
 
             const string sPath = "employees.txt";
 
-            string employee = egn + " % " + name + " % " + middleName + " % " + familyName + " % " + profession + " % " + department + " % " + payment + " % " + dateTimePicker1;
+            string employee = egn + " % " + name + " % " + middleName + " % " + familyName + " % " + profession + " % " + department + " % " + payment;
             //File.AppendAllText(sPath, employee);
             TextWriter tw = new StreamWriter(sPath, true);
             tw.WriteLine(employee);
@@ -120,7 +120,7 @@ namespace ItSoft
 
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
- DateTime date = this.dateTimePicker1.Value;
+            DateTime date = this.dateTimePicker1.Value;
             this.textBoxDateOfStart.Text = date.ToString();
         }
 
