@@ -46,7 +46,6 @@
             this.LabelDateOfStart = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.startDateText = new System.Windows.Forms.MonthCalendar();
             this.textBoxDateOfStart = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -231,12 +230,6 @@
             this.dateTimePicker1.TabIndex = 35;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
             // 
-            // startDateText
-            // 
-            this.startDateText.Location = new System.Drawing.Point(323, 47);
-            this.startDateText.Name = "startDateText";
-            this.startDateText.TabIndex = 30;
-            // 
             // textBoxDateOfStart
             // 
             this.textBoxDateOfStart.Location = new System.Drawing.Point(80, 497);
@@ -255,7 +248,6 @@
             this.Controls.Add(this.textBoxDateOfStart);
             this.Controls.Add(this.LabelDateOfStart);
             this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.startDateText);
             this.Controls.Add(this.paymentText);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.departmentText);
@@ -298,7 +290,6 @@
         private System.Windows.Forms.Label LabelDateOfStart;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.MonthCalendar startDateText;
         private System.Windows.Forms.TextBox textBoxDateOfStart;
     }
 }

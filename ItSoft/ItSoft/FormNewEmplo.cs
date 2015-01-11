@@ -41,11 +41,11 @@ namespace ItSoft
             string profession = professionText.Text;
             string department = departmentText.Text;
             string payment = paymentText.Text;
-            string date = startDateText.SelectionRange.Start.ToString();
+            //string date = startDateText.SelectionRange.Start.ToString();
 
             const string sPath = "employees.txt";
 
-            string employee = egn + "%" + name + "%" + middleName + "%" + familyName + "%" + profession + "%" + department + "%" + payment + "%" + dateTimePicker1;
+            string employee = egn + " % " + name + " % " + middleName + " % " + familyName + " % " + profession + " % " + department + " % " + payment + " % " + dateTimePicker1;
             //File.AppendAllText(sPath, employee);
             TextWriter tw = new StreamWriter(sPath, true);
             tw.WriteLine(employee);
@@ -122,6 +122,11 @@ namespace ItSoft
         {
  DateTime date = this.dateTimePicker1.Value;
             this.textBoxDateOfStart.Text = date.ToString();
+        }
+
+        private void startDateText_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
         }
     }
 }

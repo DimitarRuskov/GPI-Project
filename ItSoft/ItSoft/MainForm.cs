@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ItSoft
 {
-    public partial class StartForm : Form
+    public partial class MainForm : Form
     {
-        public StartForm()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -31,6 +31,23 @@ namespace ItSoft
         private void изходToolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void авториToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AuthorForm authors = new AuthorForm();
+            authors.ShowDialog();
+        }
+
+        private void информацияЗаСлужителиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EmployeeInfo EmpInf = new EmployeeInfo();
+            EmpInf.ShowDialog();
+        }
+
+        private void заПродуктаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
