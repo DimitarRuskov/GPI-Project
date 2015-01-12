@@ -1,3 +1,2 @@
-﻿1231241234%Георги%Петров%Марушков%Java програмист%Качество по кода%32 332%System.Windows.Forms.DateTimePicker, Value: 9.1.2015 г. 0:13:20
-444444%ffffff%fff%afg%gg%%%System.Windows.Forms.DateTimePicker, Value: 9.1.2015 г. 0:15:51
-234234 sdfsdf sdf sdf Android програмист Техническа поддръжка 123123123 System.Windows.Forms.DateTimePicker, Value: 9.1.2015 г. 0:45:26
+﻿234 % 2sdf % sdf % sdf % Java програмист % Техническа поддръжка % 234
+88888 % Иван % Иванов % Петров % Web програмист % IT разработка % 3222

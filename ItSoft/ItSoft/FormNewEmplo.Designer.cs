@@ -41,7 +41,7 @@
             this.nameText = new System.Windows.Forms.TextBox();
             this.име = new System.Windows.Forms.Label();
             this.egnText = new System.Windows.Forms.TextBox();
-            this.ЕГН = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.LabelDateOfStart = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
@@ -180,15 +180,16 @@
             this.egnText.TabIndex = 17;
             this.egnText.TextChanged += new System.EventHandler(this.egnText_TextChanged);
             // 
-            // ЕГН
+            // ID
             // 
-            this.ЕГН.AutoSize = true;
-            this.ЕГН.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ЕГН.Location = new System.Drawing.Point(76, 21);
-            this.ЕГН.Name = "ЕГН";
-            this.ЕГН.Size = new System.Drawing.Size(41, 20);
-            this.ЕГН.TabIndex = 16;
-            this.ЕГН.Text = "ЕГН";
+            this.ID.AutoSize = true;
+            this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ID.Location = new System.Drawing.Point(76, 21);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(41, 20);
+            this.ID.TabIndex = 16;
+            this.ID.Text = "ЕГН";
+            this.ID.Click += new System.EventHandler(this.ID_Click);
             // 
             // saveButton
             // 
@@ -261,7 +262,7 @@
             this.Controls.Add(this.nameText);
             this.Controls.Add(this.име);
             this.Controls.Add(this.egnText);
-            this.Controls.Add(this.ЕГН);
+            this.Controls.Add(this.ID);
             this.Name = "FormNewEmplo";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -285,7 +286,7 @@
         private System.Windows.Forms.TextBox nameText;
         private System.Windows.Forms.Label име;
         private System.Windows.Forms.TextBox egnText;
-        private System.Windows.Forms.Label ЕГН;
+        private System.Windows.Forms.Label ID;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Label LabelDateOfStart;
         private System.Windows.Forms.Button buttonExit;

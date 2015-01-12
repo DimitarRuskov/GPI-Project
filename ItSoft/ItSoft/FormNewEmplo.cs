@@ -128,5 +128,10 @@ namespace ItSoft
         {
 
         }
+
+        private void ID_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

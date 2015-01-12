@@ -22,3 +22,33 @@ C:\Users\rawket\Desktop\GUI\GPI-Project\ItSoft\ItSoft\obj\Debug\ItSoft.MainForm.
 C:\Users\rawket\Desktop\GUI\GPI-Project\ItSoft\ItSoft\obj\Debug\ItSoft.FormNewEmplo.resources
 C:\Users\rawket\Desktop\GUI\GPI-Project\ItSoft\ItSoft\obj\Debug\ItSoft.Properties.Resources.resources
 C:\Users\rawket\Desktop\GUI\GPI-Project\ItSoft\ItSoft\obj\Debug\ItSoft.csproj.GenerateResource.Cache
+C:\Users\George\Desktop\ItSoft\ItSoft\bin\Debug\ItSoft.exe.config
+C:\Users\George\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.exe
+C:\Users\George\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.pdb
+F:\ItSoft\ItSoft\bin\Debug\ItSoft.exe.config
+F:\ItSoft\ItSoft\obj\Debug\ItSoft.exe
+F:\ItSoft\ItSoft\obj\Debug\ItSoft.pdb
+d:\Users\didi\Desktop\ItSoft\ItSoft\bin\Debug\ItSoft.exe.config
+d:\Users\didi\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.exe
+d:\Users\didi\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.pdb
+d:\Users\didi\Desktop\ItSoft\ItSoft\bin\Debug\ItSoft.exe
+d:\Users\didi\Desktop\ItSoft\ItSoft\bin\Debug\ItSoft.pdb
+d:\Users\didi\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.csprojResolveAssemblyReference.cache
+d:\Users\didi\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.AuthorForm.resources
+d:\Users\didi\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.EmployeeInfo.resources
+d:\Users\didi\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.MainForm.resources
+d:\Users\didi\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.FormNewEmplo.resources
+d:\Users\didi\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.Properties.Resources.resources
+d:\Users\didi\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.csproj.GenerateResource.Cache
+C:\Users\George\Desktop\ItSoft\ItSoft\bin\Debug\ItSoft.exe
+C:\Users\George\Desktop\ItSoft\ItSoft\bin\Debug\ItSoft.pdb
+C:\Users\George\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.csprojResolveAssemblyReference.cache
+C:\Users\George\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.AuthorForm.resources
+C:\Users\George\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.EmployeeInfo.resources
+C:\Users\George\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.MainForm.resources
+C:\Users\George\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.FormNewEmplo.resources
+C:\Users\George\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.Properties.Resources.resources
+C:\Users\George\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.csproj.GenerateResource.Cache
+C:\Users\George\Desktop\Project GUI\GPI-Project\ItSoft\ItSoft\bin\Debug\ItSoft.exe.config
+C:\Users\George\Desktop\Project GUI\GPI-Project\ItSoft\ItSoft\obj\Debug\ItSoft.exe
+C:\Users\George\Desktop\Project GUI\GPI-Project\ItSoft\ItSoft\obj\Debug\ItSoft.pdb

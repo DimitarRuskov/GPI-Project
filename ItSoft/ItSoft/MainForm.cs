@@ -17,18 +17,13 @@ namespace ItSoft
             InitializeComponent();
         }
 
-        private void новСлужителToolStripMenuItem_Click(object sender, EventArgs e)
+        private void NewEmployee_Click(object sender, EventArgs e)
         {
             FormNewEmplo f1 = new FormNewEmplo();
             f1.ShowDialog();
         }
 
-        private void изходToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void изходToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        private void ExitMenu_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -39,13 +34,48 @@ namespace ItSoft
             authors.ShowDialog();
         }
 
-        private void информацияЗаСлужителиToolStripMenuItem_Click(object sender, EventArgs e)
+        private void EmployeeInfo_Click(object sender, EventArgs e)
         {
             EmployeeInfo EmpInf = new EmployeeInfo();
             EmpInf.ShowDialog();
         }
 
-        private void заПродуктаToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ProductInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RemoveEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void License_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HomeMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExportMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Authors_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChangeSalary_Click(object sender, EventArgs e)
         {
 
         }
