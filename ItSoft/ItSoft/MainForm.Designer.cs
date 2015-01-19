@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.HomeMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,11 +42,16 @@
             this.Authors = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.License = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HomeMenu,
             this.EditMenu,
@@ -53,7 +59,8 @@
             this.HelpMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(330, 24);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.menuStrip1.Size = new System.Drawing.Size(659, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -62,8 +69,10 @@
             this.HomeMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ExitMenu});
             this.HomeMenu.Name = "HomeMenu";
+            this.HomeMenu.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.HomeMenu.Size = new System.Drawing.Size(61, 20);
-            this.HomeMenu.Text = "Начало";
+            this.HomeMenu.Text = "&Начало";
+            this.HomeMenu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.HomeMenu.Click += new System.EventHandler(this.HomeMenu_Click);
             // 
             // ExitMenu
@@ -134,35 +143,56 @@
             // Authors
             // 
             this.Authors.Name = "Authors";
-            this.Authors.Size = new System.Drawing.Size(152, 22);
+            this.Authors.Size = new System.Drawing.Size(142, 22);
             this.Authors.Text = "За Авторите";
             this.Authors.Click += new System.EventHandler(this.Authors_Click);
             // 
             // ProductInfo
             // 
             this.ProductInfo.Name = "ProductInfo";
-            this.ProductInfo.Size = new System.Drawing.Size(152, 22);
+            this.ProductInfo.Size = new System.Drawing.Size(142, 22);
             this.ProductInfo.Text = "За Продукта";
             this.ProductInfo.Click += new System.EventHandler(this.ProductInfo_Click);
             // 
             // License
             // 
             this.License.Name = "License";
-            this.License.Size = new System.Drawing.Size(152, 22);
+            this.License.Size = new System.Drawing.Size(142, 22);
             this.License.Text = "Лиценз";
             this.License.Click += new System.EventHandler(this.License_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 438);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(659, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(48, 97);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(574, 262);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 301);
+            this.ClientSize = new System.Drawing.Size(659, 460);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,6 +213,8 @@
         private System.Windows.Forms.ToolStripMenuItem EmployeeInfo;
         private System.Windows.Forms.ToolStripMenuItem ProductInfo;
         private System.Windows.Forms.ToolStripMenuItem License;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

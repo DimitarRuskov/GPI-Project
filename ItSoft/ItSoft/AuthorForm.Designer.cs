@@ -28,55 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthorForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.AuthorDimityr = new System.Windows.Forms.GroupBox();
+            this.AuthorGeorge = new System.Windows.Forms.GroupBox();
+            this.pictureBoxDimityr = new System.Windows.Forms.PictureBox();
+            this.pictureBoxGeorge = new System.Windows.Forms.PictureBox();
+            this.AuthorDimityr.SuspendLayout();
+            this.AuthorGeorge.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDimityr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGeorge)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // AuthorDimityr
             // 
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(80, 47);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(239, 107);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.AuthorDimityr.Controls.Add(this.pictureBoxDimityr);
+            this.AuthorDimityr.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AuthorDimityr.Location = new System.Drawing.Point(23, 14);
+            this.AuthorDimityr.Name = "AuthorDimityr";
+            this.AuthorDimityr.Size = new System.Drawing.Size(392, 160);
+            this.AuthorDimityr.TabIndex = 0;
+            this.AuthorDimityr.TabStop = false;
+            this.AuthorDimityr.Text = "Димитър Русков";
             // 
-            // label1
+            // AuthorGeorge
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 223);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(359, 90);
-            this.label1.TabIndex = 1;
-            this.label1.Text = resources.GetString("label1.Text");
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.UseCompatibleTextRendering = true;
+            this.AuthorGeorge.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AuthorGeorge.Controls.Add(this.pictureBoxGeorge);
+            this.AuthorGeorge.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AuthorGeorge.Location = new System.Drawing.Point(23, 192);
+            this.AuthorGeorge.Name = "AuthorGeorge";
+            this.AuthorGeorge.Size = new System.Drawing.Size(392, 161);
+            this.AuthorGeorge.TabIndex = 1;
+            this.AuthorGeorge.TabStop = false;
+            this.AuthorGeorge.Text = "Георги Марушков";
+            // 
+            // pictureBoxDimityr
+            // 
+            this.pictureBoxDimityr.Location = new System.Drawing.Point(17, 41);
+            this.pictureBoxDimityr.Name = "pictureBoxDimityr";
+            this.pictureBoxDimityr.Size = new System.Drawing.Size(83, 88);
+            this.pictureBoxDimityr.TabIndex = 0;
+            this.pictureBoxDimityr.TabStop = false;
+            // 
+            // pictureBoxGeorge
+            // 
+            this.pictureBoxGeorge.Location = new System.Drawing.Point(17, 40);
+            this.pictureBoxGeorge.Name = "pictureBoxGeorge";
+            this.pictureBoxGeorge.Size = new System.Drawing.Size(83, 88);
+            this.pictureBoxGeorge.TabIndex = 1;
+            this.pictureBoxGeorge.TabStop = false;
             // 
             // AuthorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 377);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(437, 377);
+            this.Controls.Add(this.AuthorGeorge);
+            this.Controls.Add(this.AuthorDimityr);
             this.Name = "AuthorForm";
             this.Text = "Автори";
             this.Load += new System.EventHandler(this.AuthorForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.AuthorDimityr.ResumeLayout(false);
+            this.AuthorGeorge.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDimityr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGeorge)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox AuthorDimityr;
+        private System.Windows.Forms.PictureBox pictureBoxDimityr;
+        private System.Windows.Forms.GroupBox AuthorGeorge;
+        private System.Windows.Forms.PictureBox pictureBoxGeorge;
+
+
     }
 }

@@ -52,3 +52,43 @@ C:\Users\George\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.csproj.GenerateResource.C
 C:\Users\George\Desktop\Project GUI\GPI-Project\ItSoft\ItSoft\bin\Debug\ItSoft.exe.config
 C:\Users\George\Desktop\Project GUI\GPI-Project\ItSoft\ItSoft\obj\Debug\ItSoft.exe
 C:\Users\George\Desktop\Project GUI\GPI-Project\ItSoft\ItSoft\obj\Debug\ItSoft.pdb
+C:\Users\marushkg\Desktop\ItSoft\ItSoft\ItSoft\bin\Debug\ItSoft.exe.config
+C:\Users\marushkg\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.exe
+C:\Users\marushkg\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.pdb
+C:\Users\marushkg\Desktop\ItSoft\ItSoft\ItSoft\bin\Debug\ItSoft.exe
+C:\Users\marushkg\Desktop\ItSoft\ItSoft\ItSoft\bin\Debug\ItSoft.pdb
+C:\Users\marushkg\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.csprojResolveAssemblyReference.cache
+C:\Users\marushkg\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.AuthorForm.resources
+C:\Users\marushkg\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.EmployeeInfo.resources
+C:\Users\marushkg\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.MainForm.resources
+C:\Users\marushkg\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.FormNewEmplo.resources
+C:\Users\marushkg\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.Properties.Resources.resources
+C:\Users\marushkg\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.csproj.GenerateResource.Cache
+C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\bin\Debug\ItSoft.exe.config
+C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.exe
+C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.pdb
+C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.csprojResolveAssemblyReference.cache
+C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.AuthorForm.resources
+C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.EmployeeInfo.resources
+C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.MainForm.resources
+C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.FormNewEmplo.resources
+C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.Properties.Resources.resources
+C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.csproj.GenerateResource.Cache
+C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\bin\Debug\ItSoft.exe
+C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\bin\Debug\ItSoft.pdb
+C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.IDDeleteForm.resources
+C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\bin\Debug\ItSoft.exe.config
+C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\obj\Debug\ItSoft.exe
+C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\obj\Debug\ItSoft.pdb
+C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\bin\Debug\ItSoft.exe
+C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\bin\Debug\ItSoft.pdb
+C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\obj\Debug\ItSoft.csprojResolveAssemblyReference.cache
+C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\obj\Debug\ItSoft.AuthorForm.resources
+C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\obj\Debug\ItSoft.IDDeleteForm.resources
+C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\obj\Debug\ItSoft.EmployeeInfo.resources
+C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\obj\Debug\ItSoft.MainForm.resources
+C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\obj\Debug\ItSoft.FormNewEmplo.resources
+C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\obj\Debug\ItSoft.Properties.Resources.resources
+C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\obj\Debug\ItSoft.csproj.GenerateResource.Cache
+C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\bin\Debug\ClosedXML.dll
+C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.SoftwareForm.resources

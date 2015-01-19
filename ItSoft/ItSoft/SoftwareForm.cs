@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace ItSoft
 {
-    public partial class AuthorForm : Form
+    public partial class SoftwareForm : Form
     {
-        public AuthorForm()
+        public SoftwareForm()
         {
             InitializeComponent();
-        }
-
-        private void AuthorForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label1_Click(object sender, EventArgs e)

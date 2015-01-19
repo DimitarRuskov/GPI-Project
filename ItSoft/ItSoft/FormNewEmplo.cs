@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
 namespace ItSoft
 {
@@ -13,23 +13,14 @@ namespace ItSoft
 
         private void professionText_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //professionText.Items.Add("QA инженер");
-            //professionText.Items.Add("стажант");
-            //professionText.Items.Add("системен администратор");
-            //professionText.Items.Add("Java програмист");
-            //professionText.Items.Add("Web програмист");
-            //professionText.Items.Add("Android програмист");
-            //professionText.Items.Add("Java програмист");
         }
 
         private void departmentText_SelectedIndexChanged(object sender, EventArgs e)
         {
-         
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
         }
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -40,24 +31,19 @@ namespace ItSoft
             string familyName = familyNameText.Text;
             string profession = professionText.Text;
             string department = departmentText.Text;
-            string payment = paymentText.Text;
-            //string date = startDateText.SelectionRange.Start.ToString();
+            var payment = paymentText.Text;
+            //string dateStart = textBoxDateOfStart.Text;
+            string dateStart = dateTimePicker1.Text;
 
             const string sPath = "employees.txt";
 
-            string employee = egn + " % " + name + " % " + middleName + " % " + familyName + " % " + profession + " % " + department + " % " + payment;
-            //File.AppendAllText(sPath, employee);
+            string employee = egn + "%" + name + "%" + middleName + "%" + familyName + "%" + profession + "%" + department + "%" + payment + "%" + dateStart;
             TextWriter tw = new StreamWriter(sPath, true);
             tw.WriteLine(employee);
             tw.Close();
 
-
-            //SaveFile.Close();
-
-            MessageBox.Show("Employee saved!");
+            MessageBox.Show("Служителят записан успешно!");
         }
-
-   
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -66,16 +52,13 @@ namespace ItSoft
 
         private void egnText_TextChanged(object sender, EventArgs e)
         {
-            
             try
             {
-                int EGN; 
-                EGN= int.Parse(egnText.Text);
-
+                long EGN;
+                EGN = long.Parse(egnText.Text);
             }
             catch (FormatException)
             {
-
                 MessageBox.Show("Въведете коректно ЕГН");
                 egnText.Clear();
             }
@@ -87,51 +70,41 @@ namespace ItSoft
             {
                 int Payment;
                 Payment = int.Parse(paymentText.Text);
-
             }
             catch (FormatException)
             {
-
                 MessageBox.Show("Въведете коректни стойности");
             }
         }
 
         private void nameText_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                string name;
-                name = nameText.Text;
-
-            }
-            catch (FormatException)
-            {
-
-                MessageBox.Show("Въведете коректно ИМЕ !");
-            }
         }
-
-
 
         private void textBoxDateOfStart_TextChanged(object sender, EventArgs e)
         {
-           
         }
 
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
             DateTime date = this.dateTimePicker1.Value;
-            this.textBoxDateOfStart.Text = date.ToString();
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
         }
 
         private void startDateText_DateChanged(object sender, DateRangeEventArgs e)
         {
-
         }
 
         private void ID_Click(object sender, EventArgs e)
         {
+        }
 
+        private void nameText_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+        }
+
+        private void egnText_TextChanged_1(object sender, EventArgs e)
+        {
         }
     }
 }
