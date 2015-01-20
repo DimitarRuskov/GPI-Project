@@ -31,6 +31,11 @@ namespace ItSoft
         {
             
             string idDelete = idToDelete.Text;
+            if (idDelete.Length <= 3)
+            {
+                MessageBox.Show("ЕГН-то, което въведохте е прекалено кратко!");
+                return;
+            }
 
             StreamReader sr = new StreamReader("employees.txt");
             string allData = sr.ReadToEnd();
