@@ -32,9 +32,8 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.IDDelete = new System.Windows.Forms.Button();
             this.formNewEmploBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.SaveDeletedID = new System.Windows.Forms.Button();
             this.SearchButton = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.idToDelete = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.formNewEmploBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,16 +56,6 @@
             // 
             this.formNewEmploBindingSource.DataSource = typeof(ItSoft.FormNewEmplo);
             // 
-            // SaveDeletedID
-            // 
-            this.SaveDeletedID.Location = new System.Drawing.Point(227, 115);
-            this.SaveDeletedID.Name = "SaveDeletedID";
-            this.SaveDeletedID.Size = new System.Drawing.Size(75, 23);
-            this.SaveDeletedID.TabIndex = 3;
-            this.SaveDeletedID.Text = "Запиши";
-            this.SaveDeletedID.UseVisualStyleBackColor = true;
-            this.SaveDeletedID.Click += new System.EventHandler(this.SaveDeletedID_Click);
-            // 
             // SearchButton
             // 
             this.SearchButton.Location = new System.Drawing.Point(227, 36);
@@ -77,28 +66,28 @@
             this.SearchButton.UseVisualStyleBackColor = true;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
-            // listBox1
+            // idToDelete
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(31, 102);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 5;
+            this.idToDelete.Location = new System.Drawing.Point(22, 36);
+            this.idToDelete.Name = "idToDelete";
+            this.idToDelete.Size = new System.Drawing.Size(135, 20);
+            this.idToDelete.TabIndex = 5;
+            this.idToDelete.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // IDDeleteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 375);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.idToDelete);
             this.Controls.Add(this.SearchButton);
-            this.Controls.Add(this.SaveDeletedID);
             this.Controls.Add(this.IDDelete);
             this.Name = "IDDeleteForm";
             this.Text = "DeleteIdForm";
             this.Load += new System.EventHandler(this.IDDeleteForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.formNewEmploBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -107,9 +96,8 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.BindingSource formNewEmploBindingSource;
         private System.Windows.Forms.Button IDDelete;
-        private System.Windows.Forms.Button SaveDeletedID;
         private System.Windows.Forms.Button SearchButton;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox idToDelete;
 
     }
 }
