@@ -106,38 +106,79 @@ namespace ItSoft
 
         private void ExportButton_Click(object sender, EventArgs e)
         {
+            Excel.Application xlApp;
+            Excel.Workbook xlWorkBook;
+            Excel.Worksheet xlWorkSheet;
+            object misValue = System.Reflection.Missing.Value;
+            xlApp = new Excel.Application();
+            xlWorkBook = xlApp.Workbooks.Add(misValue);
+            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
       
-                Excel.Application xlApp;
-                Excel.Workbook xlWorkBook;
-                Excel.Worksheet xlWorkSheet;
-                object misValue = System.Reflection.Missing.Value;
+            int i = 0;
+            int j = 0;
 
-                xlApp = new Excel.Application();
-                xlWorkBook = xlApp.Workbooks.Add(misValue);
-                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-                int i = 0;
-                int j = 0;
-
-                for (i = 0; i <= dataGridView1.RowCount - 1; i++)
+            for (i = 0; i <= dataGridView1.RowCount - 1; i++)
+            {
+                for (j = 0; j <= dataGridView1.ColumnCount - 1; j++)
                 {
-                    for (j = 0; j <= dataGridView1.ColumnCount - 1; j++)
-                    {
-                        DataGridViewCell cell = dataGridView1[j, i];
-                        xlWorkSheet.Cells[i + 1, j + 1] = cell.Value;
-                    }
+                    DataGridViewCell cell = dataGridView1[j, i];
+                    xlWorkSheet.Cells[i + 1, j + 1] = cell.Value;
                 }
+            }
 
-                xlWorkBook.SaveAs("EmployerInformation.xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+            System.Windows.Forms.SaveFileDialog saveDlg = new System.Windows.Forms.SaveFileDialog();
+            saveDlg.InitialDirectory = @"C:\";
+            saveDlg.Filter = "Excel files (*.xls)|*.xls";
+            saveDlg.FilterIndex = 0;
+            saveDlg.RestoreDirectory = true;
+            saveDlg.Title = "Export Excel File To";
+            if (saveDlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string path = saveDlg.FileName;
+                xlWorkBook.SaveCopyAs(path);
+                xlWorkBook.Saved = true;
                 xlWorkBook.Close(true, misValue, misValue);
                 xlApp.Quit();
-
-            MessageBox.Show("Файла е създаден");
-
-            
+            }
         }
+    
+
+
+
+
+        //    Excel.Application xlApp;
+        //    Excel.Workbook xlWorkBook;
+        //    Excel.Worksheet xlWorkSheet;
+        //    object misValue = System.Reflection.Missing.Value;
+
+        //    xlApp = new Excel.Application();
+        //    xlWorkBook = xlApp.Workbooks.Add(misValue);
+        //    xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+        //    int i = 0;
+        //    int j = 0;
+
+        //    for (i = 0; i <= dataGridView1.RowCount - 1; i++)
+        //    {
+        //        for (j = 0; j <= dataGridView1.ColumnCount - 1; j++)
+        //        {
+        //            DataGridViewCell cell = dataGridView1[j, i];
+        //            xlWorkSheet.Cells[i + 1, j + 1] = cell.Value;
+        //        }
+        //    }
+
+        //    xlWorkBook.SaveAs("EmployerInformation.xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+        //    xlWorkBook.Close(true, misValue, misValue);
+        //    xlApp.Quit();
+
+        //MessageBox.Show("Файла е създаден");
+
+
+
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
         }
     }
 }
+

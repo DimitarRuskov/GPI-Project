@@ -70,7 +70,7 @@
             this.ExitMenu});
             this.HomeMenu.Name = "HomeMenu";
             this.HomeMenu.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.HomeMenu.Size = new System.Drawing.Size(61, 20);
+            this.HomeMenu.Size = new System.Drawing.Size(73, 25);
             this.HomeMenu.Text = "&Начало";
             this.HomeMenu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.HomeMenu.Click += new System.EventHandler(this.HomeMenu_Click);
@@ -78,7 +78,7 @@
             // ExitMenu
             // 
             this.ExitMenu.Name = "ExitMenu";
-            this.ExitMenu.Size = new System.Drawing.Size(106, 22);
+            this.ExitMenu.Size = new System.Drawing.Size(120, 24);
             this.ExitMenu.Text = "Изход";
             this.ExitMenu.Click += new System.EventHandler(this.ExitMenu_Click);
             // 
@@ -89,28 +89,28 @@
             this.RemoveEmployee,
             this.ChangeSalary});
             this.EditMenu.Name = "EditMenu";
-            this.EditMenu.Size = new System.Drawing.Size(70, 20);
+            this.EditMenu.Size = new System.Drawing.Size(86, 25);
             this.EditMenu.Text = "Редакция";
             this.EditMenu.Click += new System.EventHandler(this.EditMenu_Click);
             // 
             // NewEmployee
             // 
             this.NewEmployee.Name = "NewEmployee";
-            this.NewEmployee.Size = new System.Drawing.Size(213, 22);
+            this.NewEmployee.Size = new System.Drawing.Size(254, 24);
             this.NewEmployee.Text = "Нов Служител";
             this.NewEmployee.Click += new System.EventHandler(this.NewEmployee_Click);
             // 
             // RemoveEmployee
             // 
             this.RemoveEmployee.Name = "RemoveEmployee";
-            this.RemoveEmployee.Size = new System.Drawing.Size(213, 22);
+            this.RemoveEmployee.Size = new System.Drawing.Size(254, 24);
             this.RemoveEmployee.Text = "Премахване на служител";
             this.RemoveEmployee.Click += new System.EventHandler(this.RemoveEmployee_Click);
             // 
             // ChangeSalary
             // 
             this.ChangeSalary.Name = "ChangeSalary";
-            this.ChangeSalary.Size = new System.Drawing.Size(213, 22);
+            this.ChangeSalary.Size = new System.Drawing.Size(254, 24);
             this.ChangeSalary.Text = "Промяна на заплата";
             this.ChangeSalary.Click += new System.EventHandler(this.ChangeSalary_Click);
             // 
@@ -119,14 +119,14 @@
             this.ExportMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.EmployeeInfo});
             this.ExportMenu.Name = "ExportMenu";
-            this.ExportMenu.Size = new System.Drawing.Size(66, 20);
+            this.ExportMenu.Size = new System.Drawing.Size(80, 25);
             this.ExportMenu.Text = "Справки";
             this.ExportMenu.Click += new System.EventHandler(this.ExportMenu_Click);
             // 
             // EmployeeInfo
             // 
             this.EmployeeInfo.Name = "EmployeeInfo";
-            this.EmployeeInfo.Size = new System.Drawing.Size(225, 22);
+            this.EmployeeInfo.Size = new System.Drawing.Size(267, 24);
             this.EmployeeInfo.Text = "Информация за служители";
             this.EmployeeInfo.Click += new System.EventHandler(this.EmployeeInfo_Click);
             // 
@@ -137,27 +137,27 @@
             this.ProductInfo,
             this.License});
             this.HelpMenu.Name = "HelpMenu";
-            this.HelpMenu.Size = new System.Drawing.Size(62, 20);
+            this.HelpMenu.Size = new System.Drawing.Size(73, 25);
             this.HelpMenu.Text = "Помощ";
             // 
             // Authors
             // 
             this.Authors.Name = "Authors";
-            this.Authors.Size = new System.Drawing.Size(142, 22);
+            this.Authors.Size = new System.Drawing.Size(163, 24);
             this.Authors.Text = "За Авторите";
             this.Authors.Click += new System.EventHandler(this.Authors_Click);
             // 
             // ProductInfo
             // 
             this.ProductInfo.Name = "ProductInfo";
-            this.ProductInfo.Size = new System.Drawing.Size(142, 22);
+            this.ProductInfo.Size = new System.Drawing.Size(163, 24);
             this.ProductInfo.Text = "За Продукта";
             this.ProductInfo.Click += new System.EventHandler(this.ProductInfo_Click);
             // 
             // License
             // 
             this.License.Name = "License";
-            this.License.Size = new System.Drawing.Size(142, 22);
+            this.License.Size = new System.Drawing.Size(163, 24);
             this.License.Text = "Лиценз";
             this.License.Click += new System.EventHandler(this.License_Click);
             // 
