@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Data;
 using System.IO;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace ItSoft
 {
@@ -105,6 +106,34 @@ namespace ItSoft
 
         private void ExportButton_Click(object sender, EventArgs e)
         {
+      
+                Excel.Application xlApp;
+                Excel.Workbook xlWorkBook;
+                Excel.Worksheet xlWorkSheet;
+                object misValue = System.Reflection.Missing.Value;
+
+                xlApp = new Excel.Application();
+                xlWorkBook = xlApp.Workbooks.Add(misValue);
+                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+                int i = 0;
+                int j = 0;
+
+                for (i = 0; i <= dataGridView1.RowCount - 1; i++)
+                {
+                    for (j = 0; j <= dataGridView1.ColumnCount - 1; j++)
+                    {
+                        DataGridViewCell cell = dataGridView1[j, i];
+                        xlWorkSheet.Cells[i + 1, j + 1] = cell.Value;
+                    }
+                }
+
+                xlWorkBook.SaveAs("EmployerInformation.xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+                xlWorkBook.Close(true, misValue, misValue);
+                xlApp.Quit();
+
+            MessageBox.Show("Файла е създаден");
+
+            
         }
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)

@@ -29,39 +29,58 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmployeeGroupBox = new System.Windows.Forms.GroupBox();
             this.SaveButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.ExportButton = new System.Windows.Forms.Button();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.EmployeeGroupBox = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            this.EmployeeGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.EmployeeGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // saveFileDialog1
             // 
             this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
-
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // deleteRowToolStripMenuItem
+            // 
+            this.deleteRowToolStripMenuItem.Name = "deleteRowToolStripMenuItem";
+            this.deleteRowToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // addRowToolStripMenuItem
+            // 
+            this.addRowToolStripMenuItem.Name = "addRowToolStripMenuItem";
+            this.addRowToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // editRowToolStripMenuItem
+            // 
+            this.editRowToolStripMenuItem.Name = "editRowToolStripMenuItem";
+            this.editRowToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -72,46 +91,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Информация за служители на фирма ITSoft";
             // 
-            // SaveButton
+            // statusStrip1
             // 
-            this.SaveButton.Location = new System.Drawing.Point(633, 430);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(105, 37);
-            this.SaveButton.TabIndex = 2;
-            this.SaveButton.Text = "Запази";
-            this.SaveButton.UseVisualStyleBackColor = true;
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
-            // 
-            // ExitButton
-            // 
-            this.ExitButton.Location = new System.Drawing.Point(755, 430);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(105, 37);
-            this.ExitButton.TabIndex = 3;
-            this.ExitButton.Text = "Изход";
-            this.ExitButton.UseVisualStyleBackColor = true;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            // 
-            // ExportButton
-            // 
-            this.ExportButton.Location = new System.Drawing.Point(511, 430);
-            this.ExportButton.Name = "ExportButton";
-            this.ExportButton.Size = new System.Drawing.Size(105, 37);
-            this.ExportButton.TabIndex = 4;
-            this.ExportButton.Text = "Експорт";
-            this.ExportButton.UseVisualStyleBackColor = true;
-            this.ExportButton.Click += new System.EventHandler(this.ExportButton_Click);
-            // 
-            // EmployeeGroupBox
-            // 
-            this.EmployeeGroupBox.Controls.Add(this.dataGridView1);
-            this.EmployeeGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EmployeeGroupBox.Location = new System.Drawing.Point(12, 55);
-            this.EmployeeGroupBox.Name = "EmployeeGroupBox";
-            this.EmployeeGroupBox.Size = new System.Drawing.Size(878, 371);
-            this.EmployeeGroupBox.TabIndex = 5;
-            this.EmployeeGroupBox.TabStop = false;
-            this.EmployeeGroupBox.Text = "Справка и обработка на информация";
+            this.statusStrip1.Location = new System.Drawing.Point(0, 458);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(902, 22);
+            this.statusStrip1.TabIndex = 6;
+            this.statusStrip1.Text = "statusStrip1";
             // 
             // dataGridView1
             // 
@@ -143,46 +129,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(845, 332);
             this.dataGridView1.TabIndex = 1;
             // 
-            // Column1
+            // Column8
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "ЕГН";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 61;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.HeaderText = "Име";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 60;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column3.HeaderText = "Презиме";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 92;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column4.HeaderText = "Фамилия";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 92;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column5.HeaderText = "Професия";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column6.HeaderText = "Отдел";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 74;
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Column8.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column8.HeaderText = "Дата на постъпване";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 151;
             // 
             // Column7
             // 
@@ -195,23 +150,87 @@
             this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column7.Width = 89;
             // 
-            // Column8
+            // Column6
             // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Column8.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column8.HeaderText = "Дата на постъпване";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 151;
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column6.HeaderText = "Отдел";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 74;
             // 
-            // statusStrip1
+            // Column5
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 458);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(902, 22);
-            this.statusStrip1.TabIndex = 6;
-            this.statusStrip1.Text = "statusStrip1";
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column5.HeaderText = "Професия";
+            this.Column5.Name = "Column5";
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column4.HeaderText = "Фамилия";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 92;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column3.HeaderText = "Презиме";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 92;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.HeaderText = "Име";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 60;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.HeaderText = "ЕГН";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 61;
+            // 
+            // EmployeeGroupBox
+            // 
+            this.EmployeeGroupBox.Controls.Add(this.dataGridView1);
+            this.EmployeeGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EmployeeGroupBox.Location = new System.Drawing.Point(12, 55);
+            this.EmployeeGroupBox.Name = "EmployeeGroupBox";
+            this.EmployeeGroupBox.Size = new System.Drawing.Size(878, 371);
+            this.EmployeeGroupBox.TabIndex = 5;
+            this.EmployeeGroupBox.TabStop = false;
+            this.EmployeeGroupBox.Text = "Справка и обработка на информация";
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.Location = new System.Drawing.Point(633, 430);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(105, 37);
+            this.SaveButton.TabIndex = 2;
+            this.SaveButton.Text = "Запази";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.Location = new System.Drawing.Point(755, 430);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(105, 37);
+            this.ExitButton.TabIndex = 3;
+            this.ExitButton.Text = "Изход";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // ExportButton
+            // 
+            this.ExportButton.Location = new System.Drawing.Point(511, 430);
+            this.ExportButton.Name = "ExportButton";
+            this.ExportButton.Size = new System.Drawing.Size(105, 37);
+            this.ExportButton.TabIndex = 4;
+            this.ExportButton.Text = "Експорт";
+            this.ExportButton.UseVisualStyleBackColor = true;
+            this.ExportButton.Click += new System.EventHandler(this.ExportButton_Click);
             // 
             // EmployeeInfo
             // 
@@ -227,10 +246,9 @@
             this.Name = "EmployeeInfo";
             this.Text = "EmployeeInfo";
             this.Load += new System.EventHandler(this.EmployeeInfo_Load);
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            this.EmployeeGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.EmployeeGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,15 +258,12 @@
 
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.Button ExportButton;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem deleteRowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addRowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editRowToolStripMenuItem;
-        private System.Windows.Forms.GroupBox EmployeeGroupBox;
+        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -258,7 +273,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.GroupBox EmployeeGroupBox;
+        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Button ExportButton;
 
 
     }
