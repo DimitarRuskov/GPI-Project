@@ -134,3 +134,8 @@ C:\Users\rawket\Desktop\GPI-Project\ItSoft\ItSoft\obj\Debug\ItSoft.FormNewEmplo.
 C:\Users\rawket\Desktop\GPI-Project\ItSoft\ItSoft\obj\Debug\ItSoft.Properties.Resources.resources
 C:\Users\rawket\Desktop\GPI-Project\ItSoft\ItSoft\obj\Debug\ItSoft.SoftwareForm.resources
 C:\Users\rawket\Desktop\GPI-Project\ItSoft\ItSoft\obj\Debug\ItSoft.csproj.GenerateResource.Cache
+C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.EmployeerInfoSalary.resources
+d:\Users\didi\Desktop\ItSoft\ItSoft\bin\Debug\ClosedXML.dll
+d:\Users\didi\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.IDDeleteForm.resources
+d:\Users\didi\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.EmployeerInfoSalary.resources
+d:\Users\didi\Desktop\ItSoft\ItSoft\obj\Debug\ItSoft.SoftwareForm.resources

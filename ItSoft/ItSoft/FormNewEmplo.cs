@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace ItSoft
@@ -60,8 +61,8 @@ namespace ItSoft
             catch (FormatException)
             {
                 MessageBox.Show("Въведете коректно ЕГН");
-                egnText.Clear();
             }
+            //egnText.Clear();
         }
 
         private void paymentText_TextChanged(object sender, EventArgs e)
@@ -79,6 +80,11 @@ namespace ItSoft
 
         private void nameText_TextChanged(object sender, EventArgs e)
         {
+            if (!Regex.IsMatch(nameText.Text, "^[a-zA-Z ]"))
+            {
+                MessageBox.Show("Моля въведете само позволени символи");
+                // nameText.Text.Remove(nameText.Text.Length - 1);
+            }
         }
 
         private void textBoxDateOfStart_TextChanged(object sender, EventArgs e)
@@ -103,8 +109,20 @@ namespace ItSoft
         {
         }
 
-        private void egnText_TextChanged_1(object sender, EventArgs e)
+        private void middleNameText_TextChanged(object sender, EventArgs e)
         {
+            if (!Regex.IsMatch(middleNameText.Text, "^[a-zA-Z ]"))
+            {
+                MessageBox.Show("Моля въведете само позволени символи");
+            }
+        }
+
+        private void familyNameText_TextChanged(object sender, EventArgs e)
+        {
+            if (!Regex.IsMatch(familyNameText.Text, "^[a-zA-Z ]"))
+            {
+                MessageBox.Show("Моля въведете само позволени символи");
+            }
         }
     }
 }

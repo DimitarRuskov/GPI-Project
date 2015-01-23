@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Data;
-using System.IO;
-using System.Text;
+﻿using System.IO;
 using System.Windows.Forms;
 
 namespace ItSoft
@@ -12,15 +9,6 @@ namespace ItSoft
         {
             InitializeComponent();
             string egn = idToDelete.Text;
-
-            //string[] lineOfContents = File.ReadAllLines("employees.txt");
-            //foreach (var line in lineOfContents)
-            //{
-            //    string[] tokens = line.Split('%');
-            //    if (tokens.Length >= 1)
-            //        comboBox1.Items.Add(tokens[0]);
-            //}
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, System.EventArgs e)
@@ -29,7 +17,6 @@ namespace ItSoft
 
         private void IDDelete_Click(object sender, System.EventArgs e)
         {
-            
             string idDelete = idToDelete.Text;
             if (idDelete.Length <= 3)
             {
@@ -67,21 +54,23 @@ namespace ItSoft
             {
                 MessageBox.Show("Служител с ЕГН: " + idDelete + " не е открит!");
             }
-            
         }
 
         private void IDDeleteForm_Load(object sender, System.EventArgs e)
         {
         }
 
-        private void SearchButton_Click(object sender, System.EventArgs e)
-        {
-         
-        }
-
         private void textBox1_TextChanged(object sender, System.EventArgs e)
         {
+        }
 
+        private void idToDelete_TextChanged(object sender, System.EventArgs e)
+        {
+        }
+
+        private void ExitButton_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
         }
     }
 }

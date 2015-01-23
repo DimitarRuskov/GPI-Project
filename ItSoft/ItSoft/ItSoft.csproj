@@ -77,6 +77,12 @@
     <Compile Include="EmployeeInfo.Designer.cs">
       <DependentUpon>EmployeeInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeerInfoSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeerInfoSalary.Designer.cs">
+      <DependentUpon>EmployeerInfoSalary.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeInfo.resx">
       <DependentUpon>EmployeeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeerInfoSalary.resx">
+      <DependentUpon>EmployeerInfoSalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -142,6 +151,66 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add to basket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Properties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brick house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Application form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64bit-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64bit-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computer-Metro.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

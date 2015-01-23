@@ -29,16 +29,14 @@ namespace ItSoft
 
         private void ProductInfo_Click(object sender, EventArgs e)
         {
+            SoftwareForm SoftForm = new SoftwareForm();
+            SoftForm.ShowDialog();
         }
 
         private void RemoveEmployee_Click(object sender, EventArgs e)
         {
             IDDeleteForm IDRemove = new IDDeleteForm();
             IDRemove.ShowDialog();
-        }
-
-        private void License_Click(object sender, EventArgs e)
-        {
         }
 
         private void EditMenu_Click(object sender, EventArgs e)
@@ -60,6 +58,10 @@ namespace ItSoft
         }
 
         private void ChangeSalary_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void License_Click(object sender, EventArgs e)
         {
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Data;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -15,12 +16,41 @@ namespace ItSoft
             ReadFromFile();
         }
 
-        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void ReadFromFile()
         {
         }
 
-        public void ReadFromFile()
+        private void addRowToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            if (this.dataGridView1.SelectedRows.Count > 0)
+            {
+                dataGridView1.Rows.Add(this.dataGridView1.SelectedRows.Count);
+            }
+        }
+
+        private void cutRowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.dataGridView1.SelectedRows.Count > 0)
+            {
+                dataGridView1.Rows.Insert(this.dataGridView1.SelectedRows[0].Index);
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void deleteRowToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Are you sure you want to delete this row?", "Delete confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (this.dataGridView1.SelectedRows.Count > 0)
+            {
+                dataGridView1.Rows.RemoveAt(this.dataGridView1.SelectedRows.Count);
+            }
         }
 
         private void EmployeeInfo_Load(object sender, EventArgs e)
@@ -56,20 +86,69 @@ namespace ItSoft
                     i--;
                 }
             }
-
             sr.Close();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Наистина ли искате да излезните от приложението", "Предупреждение ИТСофт", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             this.Close();
+        }
+
+        private void ExportButton_Click(object sender, EventArgs e)
+        {
+            Excel.Application xlApp;
+            Excel.Workbook xlWorkBook;
+            Excel.Worksheet xlWorkSheet;
+            object misValue = System.Reflection.Missing.Value;
+            xlApp = new Excel.Application();
+            xlWorkBook = xlApp.Workbooks.Add(misValue);
+            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+            int i = 0;
+            int j = 0;
+
+            for (i = 0; i <= dataGridView1.RowCount - 1; i++)
+            {
+                for (j = 0; j <= dataGridView1.ColumnCount - 1; j++)
+                {
+                    DataGridViewCell cell = dataGridView1[j, i];
+                    xlWorkSheet.Cells[i + 1, j + 1] = cell.Value;
+                }
+            }
+
+            System.Windows.Forms.SaveFileDialog saveDlg = new System.Windows.Forms.SaveFileDialog();
+            saveDlg.InitialDirectory = @"C:\";
+            saveDlg.Filter = "Excel files (*.xlsx)|*.xlsx";
+            saveDlg.FilterIndex = 0;
+            saveDlg.RestoreDirectory = true;
+            saveDlg.Title = "Export Excel File To";
+            if (saveDlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string path = saveDlg.FileName;
+                xlWorkBook.SaveCopyAs(path);
+                xlWorkBook.Saved = true;
+                xlWorkBook.Close(true, misValue, misValue);
+                xlApp.Quit();
+            }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Bitmap bm = new Bitmap(this.dataGridView1.Width, this.dataGridView1.Height);
+            dataGridView1.DrawToBitmap(bm, new Rectangle(0, 0, this.dataGridView1.Width, this.dataGridView1.Height));
+            // e.Graphics.DrawImage(bm, 0, 0);
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
             //  const string sPath = "employees.txt";
             //This line of code creates a text file for the data export.
-
+            MessageBox.Show("Искате ли да запишите промените !", "Предупреждение ИТСофт", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             StreamWriter file = new StreamWriter("employees.txt", false);
             try
             {
@@ -104,81 +183,12 @@ namespace ItSoft
             }
         }
 
-        private void ExportButton_Click(object sender, EventArgs e)
-        {
-            Excel.Application xlApp;
-            Excel.Workbook xlWorkBook;
-            Excel.Worksheet xlWorkSheet;
-            object misValue = System.Reflection.Missing.Value;
-            xlApp = new Excel.Application();
-            xlWorkBook = xlApp.Workbooks.Add(misValue);
-            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-
-      
-            int i = 0;
-            int j = 0;
-
-            for (i = 0; i <= dataGridView1.RowCount - 1; i++)
-            {
-                for (j = 0; j <= dataGridView1.ColumnCount - 1; j++)
-                {
-                    DataGridViewCell cell = dataGridView1[j, i];
-                    xlWorkSheet.Cells[i + 1, j + 1] = cell.Value;
-                }
-            }
-
-            System.Windows.Forms.SaveFileDialog saveDlg = new System.Windows.Forms.SaveFileDialog();
-            saveDlg.InitialDirectory = @"C:\";
-            saveDlg.Filter = "Excel files (*.xls)|*.xls";
-            saveDlg.FilterIndex = 0;
-            saveDlg.RestoreDirectory = true;
-            saveDlg.Title = "Export Excel File To";
-            if (saveDlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                string path = saveDlg.FileName;
-                xlWorkBook.SaveCopyAs(path);
-                xlWorkBook.Saved = true;
-                xlWorkBook.Close(true, misValue, misValue);
-                xlApp.Quit();
-            }
-        }
-    
-
-
-
-
-        //    Excel.Application xlApp;
-        //    Excel.Workbook xlWorkBook;
-        //    Excel.Worksheet xlWorkSheet;
-        //    object misValue = System.Reflection.Missing.Value;
-
-        //    xlApp = new Excel.Application();
-        //    xlWorkBook = xlApp.Workbooks.Add(misValue);
-        //    xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-        //    int i = 0;
-        //    int j = 0;
-
-        //    for (i = 0; i <= dataGridView1.RowCount - 1; i++)
-        //    {
-        //        for (j = 0; j <= dataGridView1.ColumnCount - 1; j++)
-        //        {
-        //            DataGridViewCell cell = dataGridView1[j, i];
-        //            xlWorkSheet.Cells[i + 1, j + 1] = cell.Value;
-        //        }
-        //    }
-
-        //    xlWorkBook.SaveAs("EmployerInformation.xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
-        //    xlWorkBook.Close(true, misValue, misValue);
-        //    xlApp.Quit();
-
-        //MessageBox.Show("Файла е създаден");
-
-
-
-
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
         }
     }
 }
-
