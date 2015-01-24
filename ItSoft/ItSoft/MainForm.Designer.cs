@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.началоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EditMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,8 +42,8 @@
             this.HelpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.Authors = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -59,6 +61,25 @@
             this.menuStrip1.Size = new System.Drawing.Size(528, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 384);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(528, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ItSoft.Properties.Resources.Untitled_1;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 67);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(459, 284);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // началоToolStripMenuItem
             // 
@@ -144,7 +165,7 @@
             // 
             this.Authors.Image = global::ItSoft.Properties.Resources.User_group;
             this.Authors.Name = "Authors";
-            this.Authors.Size = new System.Drawing.Size(152, 22);
+            this.Authors.Size = new System.Drawing.Size(151, 22);
             this.Authors.Text = "За Авторите";
             this.Authors.Click += new System.EventHandler(this.Authors_Click);
             // 
@@ -152,32 +173,27 @@
             // 
             this.ProductInfo.Image = global::ItSoft.Properties.Resources.Application_form;
             this.ProductInfo.Name = "ProductInfo";
-            this.ProductInfo.Size = new System.Drawing.Size(152, 22);
+            this.ProductInfo.Size = new System.Drawing.Size(151, 22);
             this.ProductInfo.Text = "За Продукта";
             this.ProductInfo.Click += new System.EventHandler(this.ProductInfo_Click);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 384);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(528, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 406);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Информационна Система на ИТСофт 2015";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,6 +214,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripMenuItem началоToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem изходToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

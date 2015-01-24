@@ -12,10 +12,6 @@ namespace ItSoft
             InitializeComponent();
         }
 
-        private void professionText_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
         private void departmentText_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
@@ -53,16 +49,6 @@ namespace ItSoft
 
         private void egnText_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                long EGN;
-                EGN = long.Parse(egnText.Text);
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Въведете коректно ЕГН");
-            }
-            //egnText.Clear();
         }
 
         private void paymentText_TextChanged(object sender, EventArgs e)
@@ -80,11 +66,6 @@ namespace ItSoft
 
         private void nameText_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(nameText.Text, "^[a-zA-Z ]"))
-            {
-                MessageBox.Show("Моля въведете само позволени символи");
-                // nameText.Text.Remove(nameText.Text.Length - 1);
-            }
         }
 
         private void textBoxDateOfStart_TextChanged(object sender, EventArgs e)
@@ -105,23 +86,56 @@ namespace ItSoft
         {
         }
 
-        private void nameText_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-        }
-
         private void middleNameText_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(middleNameText.Text, "^[a-zA-Z ]"))
-            {
-                MessageBox.Show("Моля въведете само позволени символи");
-            }
         }
 
         private void familyNameText_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(familyNameText.Text, "^[a-zA-Z ]"))
+        }
+
+        private void egnText_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            try
             {
-                MessageBox.Show("Моля въведете само позволени символи");
+                long EGN;
+                EGN = long.Parse(egnText.Text);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Въведете коректно ЕГН");
+            }
+        }
+
+        private void nameText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Въведи коректни данни", "Невалиден Символ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                nameText.Clear();
+            }
+            
+
+        }
+
+        private void middleNameText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Въведи коректни данни", "Невалиден Символ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                middleNameText.Clear();
+            }
+        }
+
+        private void familyNameText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Въведи коректни данни", "Невалиден Символ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                familyNameText.Clear();
             }
         }
     }

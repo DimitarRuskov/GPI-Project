@@ -7,6 +7,8 @@ namespace ItSoft
     {
         public MainForm()
         {
+            SplashScreen spash = new SplashScreen();
+            spash.ShowDialog();
             InitializeComponent();
         }
 

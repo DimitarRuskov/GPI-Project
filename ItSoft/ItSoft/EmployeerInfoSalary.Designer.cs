@@ -38,6 +38,7 @@
             this.textBoxSalary.Name = "textBoxSalary";
             this.textBoxSalary.Size = new System.Drawing.Size(100, 20);
             this.textBoxSalary.TabIndex = 0;
+            this.textBoxSalary.TextChanged += new System.EventHandler(this.textBoxSalary_TextChanged);
             // 
             // buttonSalaryChange
             // 

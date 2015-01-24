@@ -46,10 +46,10 @@ namespace ItSoft
 
         private void deleteRowToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Are you sure you want to delete this row?", "Delete confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (this.dataGridView1.SelectedRows.Count > 0)
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
             {
-                dataGridView1.Rows.RemoveAt(this.dataGridView1.SelectedRows.Count);
+                if (!row.IsNewRow)
+                    dataGridView1.Rows.Remove(row);
             }
         }
 
@@ -187,8 +187,9 @@ namespace ItSoft
         {
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+        
         }
     }
 }

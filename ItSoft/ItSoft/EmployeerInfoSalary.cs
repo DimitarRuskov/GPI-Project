@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace ItSoft
@@ -7,6 +8,8 @@ namespace ItSoft
     {
         public EmployeerInfoSalary()
         {
+         
+
         }
 
         private void EmployeerInfoSalary_Load(object sender, EventArgs e)
@@ -18,6 +21,10 @@ namespace ItSoft
         }
 
         private void buttonSalaryChange_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void textBoxSalary_TextChanged(object sender, EventArgs e)
         {
         }
     }

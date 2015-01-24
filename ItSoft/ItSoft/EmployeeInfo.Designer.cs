@@ -30,13 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeInfo));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.deleteRowToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cutRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addRowToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,22 +46,25 @@
             this.ExportButton = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteRowToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cutRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addRowToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,7 +73,6 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -93,30 +92,6 @@
             this.addRowToolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(134, 70);
-            // 
-            // deleteRowToolStripMenuItem1
-            // 
-            this.deleteRowToolStripMenuItem1.Image = global::ItSoft.Properties.Resources.Delete;
-            this.deleteRowToolStripMenuItem1.Name = "deleteRowToolStripMenuItem1";
-            this.deleteRowToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
-            this.deleteRowToolStripMenuItem1.Text = "Delete Row";
-            this.deleteRowToolStripMenuItem1.Click += new System.EventHandler(this.deleteRowToolStripMenuItem1_Click);
-            // 
-            // cutRowToolStripMenuItem
-            // 
-            this.cutRowToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Add_to_basket;
-            this.cutRowToolStripMenuItem.Name = "cutRowToolStripMenuItem";
-            this.cutRowToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.cutRowToolStripMenuItem.Text = "Insert Row";
-            this.cutRowToolStripMenuItem.Click += new System.EventHandler(this.cutRowToolStripMenuItem_Click);
-            // 
-            // addRowToolStripMenuItem1
-            // 
-            this.addRowToolStripMenuItem1.Image = global::ItSoft.Properties.Resources.Add;
-            this.addRowToolStripMenuItem1.Name = "addRowToolStripMenuItem1";
-            this.addRowToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
-            this.addRowToolStripMenuItem1.Text = "Add Row";
-            this.addRowToolStripMenuItem1.Click += new System.EventHandler(this.addRowToolStripMenuItem1_Click);
             // 
             // deleteRowToolStripMenuItem
             // 
@@ -169,19 +144,19 @@
             this.Column5,
             this.Column6,
             this.Salary,
-            this.Column8,
-            this.Edit});
+            this.Column8});
             this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dataGridView1.Location = new System.Drawing.Point(17, 27);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(904, 328);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(878, 328);
             this.dataGridView1.StandardTab = true;
             this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // EmployeeGroupBox
             // 
@@ -189,7 +164,7 @@
             this.EmployeeGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.EmployeeGroupBox.Location = new System.Drawing.Point(12, 38);
             this.EmployeeGroupBox.Name = "EmployeeGroupBox";
-            this.EmployeeGroupBox.Size = new System.Drawing.Size(937, 371);
+            this.EmployeeGroupBox.Size = new System.Drawing.Size(911, 371);
             this.EmployeeGroupBox.TabIndex = 5;
             this.EmployeeGroupBox.TabStop = false;
             this.EmployeeGroupBox.Text = "Справка и обработка на информация";
@@ -252,6 +227,60 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
             // 
+            // toolStripSeparator
+            // 
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(147, 6);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(147, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.exitToolStripMenuItem.Text = "E&xit";
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cutToolStripMenuItem,
+            this.copyToolStripMenuItem,
+            this.pasteToolStripMenuItem,
+            this.toolStripSeparator4});
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Text = "&Edit";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(171, 6);
+            // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.optionsToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.toolsToolStripMenuItem.Text = "&Tools";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "&Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.aboutToolStripMenuItem.Text = "&About...";
+            // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
@@ -260,11 +289,6 @@
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.newToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.newToolStripMenuItem.Text = "&Home";
-            // 
-            // toolStripSeparator
-            // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(147, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -293,28 +317,6 @@
             this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.printPreviewToolStripMenuItem.Text = "Print Pre&view";
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(147, 6);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.exitToolStripMenuItem.Text = "E&xit";
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cutToolStripMenuItem,
-            this.copyToolStripMenuItem,
-            this.pasteToolStripMenuItem,
-            this.toolStripSeparator4});
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "&Edit";
-            // 
             // cutToolStripMenuItem
             // 
             this.cutToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Add;
@@ -342,19 +344,6 @@
             this.pasteToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.pasteToolStripMenuItem.Text = "&Delete Row";
             // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(171, 6);
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.optionsToolStripMenuItem});
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.toolsToolStripMenuItem.Text = "&Tools";
-            // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("optionsToolStripMenuItem.Image")));
@@ -362,19 +351,29 @@
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.optionsToolStripMenuItem.Text = "&Export to Excel";
             // 
-            // helpToolStripMenuItem
+            // deleteRowToolStripMenuItem1
             // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "&Help";
+            this.deleteRowToolStripMenuItem1.Image = global::ItSoft.Properties.Resources.Delete;
+            this.deleteRowToolStripMenuItem1.Name = "deleteRowToolStripMenuItem1";
+            this.deleteRowToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
+            this.deleteRowToolStripMenuItem1.Text = "Delete Row";
+            this.deleteRowToolStripMenuItem1.Click += new System.EventHandler(this.deleteRowToolStripMenuItem1_Click);
             // 
-            // aboutToolStripMenuItem
+            // cutRowToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.aboutToolStripMenuItem.Text = "&About...";
+            this.cutRowToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Add_to_basket;
+            this.cutRowToolStripMenuItem.Name = "cutRowToolStripMenuItem";
+            this.cutRowToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.cutRowToolStripMenuItem.Text = "Insert Row";
+            this.cutRowToolStripMenuItem.Click += new System.EventHandler(this.cutRowToolStripMenuItem_Click);
+            // 
+            // addRowToolStripMenuItem1
+            // 
+            this.addRowToolStripMenuItem1.Image = global::ItSoft.Properties.Resources.Add;
+            this.addRowToolStripMenuItem1.Name = "addRowToolStripMenuItem1";
+            this.addRowToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
+            this.addRowToolStripMenuItem1.Text = "Add Row";
+            this.addRowToolStripMenuItem1.Click += new System.EventHandler(this.addRowToolStripMenuItem1_Click);
             // 
             // Column1
             // 
@@ -427,33 +426,25 @@
             // Salary
             // 
             this.Salary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Salary.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Salary.DefaultCellStyle = dataGridViewCellStyle1;
             this.Salary.HeaderText = "Заплата";
             this.Salary.Name = "Salary";
+            this.Salary.ReadOnly = true;
             this.Salary.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Salary.Width = 89;
             // 
             // Column8
             // 
             this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle6.Format = "d";
-            dataGridViewCellStyle6.NullValue = null;
-            this.Column8.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Column8.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column8.HeaderText = "Дата на постъпване";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             this.Column8.Width = 151;
-            // 
-            // Edit
-            // 
-            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Name = "Edit";
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Edit.Width = 56;
             // 
             // EmployeeInfo
             // 
@@ -524,7 +515,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Salary;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit;
 
 
     }

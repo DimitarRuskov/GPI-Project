@@ -384,7 +384,7 @@
             this.familyNameText.Name = "familyNameText";
             this.familyNameText.Size = new System.Drawing.Size(188, 20);
             this.familyNameText.TabIndex = 37;
-            this.familyNameText.TextChanged += new System.EventHandler(this.familyNameText_TextChanged);
+            this.familyNameText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.familyNameText_KeyPress);
             // 
             // middleNameText
             // 
@@ -392,7 +392,7 @@
             this.middleNameText.Name = "middleNameText";
             this.middleNameText.Size = new System.Drawing.Size(188, 20);
             this.middleNameText.TabIndex = 36;
-            this.middleNameText.TextChanged += new System.EventHandler(this.middleNameText_TextChanged);
+            this.middleNameText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.middleNameText_KeyPress);
             // 
             // nameText
             // 
@@ -401,7 +401,7 @@
             this.nameText.Size = new System.Drawing.Size(188, 20);
             this.nameText.TabIndex = 35;
             this.nameText.TextChanged += new System.EventHandler(this.nameText_TextChanged);
-            this.nameText.Validating += new System.ComponentModel.CancelEventHandler(this.nameText_Validating);
+            this.nameText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameText_KeyPress);
             this.nameText.Validated += new System.EventHandler(this.nameText_TextChanged);
             // 
             // име
@@ -420,7 +420,7 @@
             this.egnText.Name = "egnText";
             this.egnText.Size = new System.Drawing.Size(188, 20);
             this.egnText.TabIndex = 33;
-            this.egnText.TextChanged += new System.EventHandler(this.egnText_TextChanged);
+            this.egnText.Validating += new System.ComponentModel.CancelEventHandler(this.egnText_Validating);
             // 
             // ID
             // 
