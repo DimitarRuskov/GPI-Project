@@ -8,6 +8,7 @@ namespace ItSoft
         public MainForm()
         {
             SplashScreen spash = new SplashScreen();
+
             spash.ShowDialog();
             InitializeComponent();
         }
@@ -65,6 +66,11 @@ namespace ItSoft
 
         private void License_Click(object sender, EventArgs e)
         {
+        }
+
+        private void изходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

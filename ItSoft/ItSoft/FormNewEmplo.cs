@@ -22,6 +22,39 @@ namespace ItSoft
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            saveButton_Click();
+            //if (!validateFields())
+            //{
+            //    return;
+            //}
+
+            //string egn = egnText.Text;
+            //string name = nameText.Text;
+            //string middleName = middleNameText.Text;
+            //string familyName = familyNameText.Text;
+            //string profession = professionText.Text;
+            //string department = departmentText.Text;
+            //var payment = paymentText.Text;
+
+            //string dateStart = dateTimePicker1.Text;
+
+            //const string sPath = "employees.txt";
+
+            //string employee = egn + "%" + name + "%" + middleName + "%" + familyName + "%" + profession + "%" + department + "%" + payment + "%" + dateStart;
+            //TextWriter tw = new StreamWriter(sPath, true);
+            //tw.WriteLine(employee);
+            //tw.Close();
+
+            //MessageBox.Show("Служителят записан успешно!", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public void saveButton_Click()
+        {
+             if (!validateFields())
+            {
+                return;    
+            }
+
             string egn = egnText.Text;
             string name = nameText.Text;
             string middleName = middleNameText.Text;
@@ -29,7 +62,7 @@ namespace ItSoft
             string profession = professionText.Text;
             string department = departmentText.Text;
             var payment = paymentText.Text;
-            //string dateStart = textBoxDateOfStart.Text;
+
             string dateStart = dateTimePicker1.Text;
 
             const string sPath = "employees.txt";
@@ -39,7 +72,57 @@ namespace ItSoft
             tw.WriteLine(employee);
             tw.Close();
 
-            MessageBox.Show("Служителят записан успешно!");
+            MessageBox.Show("Служителят записан успешно!", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+        }
+
+        private bool validateFields()
+        {
+            if (nameText.Text.Length <= 2)
+            {
+                MessageBox.Show("Стойността на полето 'Име' е под минималната дължина! Моля коригирайте!", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (middleNameText.Text.Length <= 2)
+            {
+                MessageBox.Show("Стойността на полето 'Презиме' е под минималната дължина! Моля коригирайте!", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (familyNameText.Text.Length <= 2)
+            {
+                MessageBox.Show("Стойността на полето 'Фамилия' е под минималната дължина! Моля коригирайте!", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (egnText.Text.Length != 10)
+            {
+                MessageBox.Show("Стойността на полето 'ЕГН' трябва да бъде точно 10 символа! Моля коригирайте!", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (paymentText.Text.Length < 1)
+            {
+                MessageBox.Show("Моля попълнете полето със стойност 'Заплата'!", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                return false;
+            }
+            else if(Double.Parse(paymentText.Text) < 350)
+            {
+                MessageBox.Show("Минималната заплата е 350лв!", "Предупреждение ИТСофт", MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+                return false;
+            }
+            if (professionText.Text.Length <= 0)
+            {
+                MessageBox.Show("Моля изберете длъжност!", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (departmentText.Text.Length <= 0)
+            {
+                MessageBox.Show("Моля изберете отдел!", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+
+            return true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -60,7 +143,9 @@ namespace ItSoft
             }
             catch (FormatException)
             {
-                MessageBox.Show("Въведете коректни стойности");
+                MessageBox.Show("Въведете коректни стойности за поле 'Заплата'", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
             }
         }
 
@@ -137,6 +222,45 @@ namespace ItSoft
                 MessageBox.Show("Въведи коректни данни", "Невалиден Символ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 familyNameText.Clear();
             }
+        }
+
+        private void customizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EmployeeInfo empinf = new EmployeeInfo();
+            empinf.Show();
+        }
+
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void authorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AuthorForm autfrm = new AuthorForm();
+            autfrm.Show();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SoftwareForm softFrm = new SoftwareForm();
+
+            softFrm.Show();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveButton_Click();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormNewEmplo newEmp = new FormNewEmplo();
+            newEmp.Show();
         }
     }
 }

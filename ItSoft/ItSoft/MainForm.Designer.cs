@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.началоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EditMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +40,8 @@
             this.HelpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.Authors = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,25 +62,6 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 384);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(528, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ItSoft.Properties.Resources.Untitled_1;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 67);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(459, 284);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // началоToolStripMenuItem
             // 
             this.началоToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -94,8 +75,9 @@
             // 
             this.изходToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Exit;
             this.изходToolStripMenuItem.Name = "изходToolStripMenuItem";
-            this.изходToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.изходToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.изходToolStripMenuItem.Text = "Изход";
+            this.изходToolStripMenuItem.Click += new System.EventHandler(this.изходToolStripMenuItem_Click);
             // 
             // EditMenu
             // 
@@ -158,8 +140,8 @@
             this.ProductInfo});
             this.HelpMenu.Image = global::ItSoft.Properties.Resources.Help;
             this.HelpMenu.Name = "HelpMenu";
-            this.HelpMenu.Size = new System.Drawing.Size(80, 29);
-            this.HelpMenu.Text = "Помощ";
+            this.HelpMenu.Size = new System.Drawing.Size(88, 29);
+            this.HelpMenu.Text = "Контакти";
             // 
             // Authors
             // 
@@ -176,6 +158,25 @@
             this.ProductInfo.Size = new System.Drawing.Size(151, 22);
             this.ProductInfo.Text = "За Продукта";
             this.ProductInfo.Click += new System.EventHandler(this.ProductInfo_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 384);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(528, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ItSoft.Properties.Resources.Untitled_1;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 67);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(459, 284);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 

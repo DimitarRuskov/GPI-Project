@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -97,6 +98,51 @@ namespace ItSoft
 
         private void ExportButton_Click(object sender, EventArgs e)
         {
+            ExportButton_Click();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+        }
+
+        public void SaveButton_Click(object sender, EventArgs e)
+        {
+            SaveButton_Click();
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+        }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveButton_Click();
+        }
+
+        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.dataGridView1.SelectedRows.Count > 0)
+            {
+                dataGridView1.Rows.Add(this.dataGridView1.SelectedRows.Count);
+            }
+        }
+
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportButton_Click();
+        }
+
+        private void ExportButton_Click()
+        {
             Excel.Application xlApp;
             Excel.Workbook xlWorkBook;
             Excel.Worksheet xlWorkSheet;
@@ -133,23 +179,11 @@ namespace ItSoft
             }
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        public void SaveButton_Click()
         {
-        }
-
-        private void printToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Bitmap bm = new Bitmap(this.dataGridView1.Width, this.dataGridView1.Height);
-            dataGridView1.DrawToBitmap(bm, new Rectangle(0, 0, this.dataGridView1.Width, this.dataGridView1.Height));
-            // e.Graphics.DrawImage(bm, 0, 0);
-        }
-
-        private void SaveButton_Click(object sender, EventArgs e)
-        {
-            //  const string sPath = "employees.txt";
-            //This line of code creates a text file for the data export.
+            //Here is start creating file to Export.
             MessageBox.Show("Искате ли да запишите промените !", "Предупреждение ИТСофт", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            StreamWriter file = new StreamWriter("employees.txt", false);
+            StreamWriter SaveFile = new StreamWriter("employees.txt", false);
             try
             {
                 string Line = "";
@@ -157,39 +191,54 @@ namespace ItSoft
                 var Columns = dataGridView1.Columns.Count;
                 for (int i = 0; i <= Rows - 1; i++)
                 {
-                    //This for loop loops through each column, and the row number
-                    //is passed from the for loop above.
+                    //This  loop loops through each column, and row number
                     for (int j = 0; j <= Columns - 1; j++)
                     {
                         Line = Line + dataGridView1.Rows[i].Cells[j].Value;
                         if (j != Columns - 1)
                         {
-                            //A comma is added as a text delimiter in order
-                            //to separate each field in the text file.
-                            //You can choose another character as a delimiter.
+                            //This is a char text delimiter !
                             Line = Line + "%";
                         }
                     }
-                    file.WriteLine(Line);
+                    SaveFile.WriteLine(Line);
                     Line = "";
                 }
-                file.Close();
+                SaveFile.Close();
                 System.Windows.Forms.MessageBox.Show("Промените са записани успешно.", "ИТСофт Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (System.Exception err)
             {
                 System.Windows.Forms.MessageBox.Show(err.Message, "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                file.Close();
+                SaveFile.Close();
             }
         }
 
-        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                if (!row.IsNewRow)
+                    dataGridView1.Rows.Remove(row);
+            }
         }
 
-        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-        
+            if (this.dataGridView1.SelectedRows.Count > 0)
+            {
+                dataGridView1.Rows.Insert(this.dataGridView1.SelectedRows[0].Index);
+            }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AuthorForm authors = new AuthorForm();
+            authors.ShowDialog();
+        }
+
+        private void printPreviewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
         }
     }
 }
