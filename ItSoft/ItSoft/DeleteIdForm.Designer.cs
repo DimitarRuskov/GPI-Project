@@ -32,9 +32,9 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.labelDeletedForm = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ExitButton = new System.Windows.Forms.Button();
             this.labelDeleteForm = new System.Windows.Forms.Label();
             this.idToDelete = new System.Windows.Forms.TextBox();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.IDDelete = new System.Windows.Forms.Button();
             this.formNewEmploBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
@@ -69,19 +69,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Секция за изтриване";
             // 
-            // ExitButton
-            // 
-            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ExitButton.Image = global::ItSoft.Properties.Resources.Exit;
-            this.ExitButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ExitButton.Location = new System.Drawing.Point(212, 94);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(125, 39);
-            this.ExitButton.TabIndex = 9;
-            this.ExitButton.Text = "Изход";
-            this.ExitButton.UseVisualStyleBackColor = true;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            // 
             // labelDeleteForm
             // 
             this.labelDeleteForm.AutoSize = true;
@@ -101,10 +88,24 @@
             this.idToDelete.TabIndex = 7;
             this.idToDelete.TextChanged += new System.EventHandler(this.idToDelete_TextChanged);
             // 
+            // ExitButton
+            // 
+            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ExitButton.Image = global::ItSoft.Properties.Resources.Exit2;
+            this.ExitButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ExitButton.Location = new System.Drawing.Point(212, 94);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(98, 39);
+            this.ExitButton.TabIndex = 9;
+            this.ExitButton.Text = "Изход";
+            this.ExitButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
             // IDDelete
             // 
             this.IDDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.IDDelete.Image = global::ItSoft.Properties.Resources.Delete;
+            this.IDDelete.Image = global::ItSoft.Properties.Resources.Erase;
             this.IDDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.IDDelete.Location = new System.Drawing.Point(212, 46);
             this.IDDelete.Name = "IDDelete";

@@ -34,7 +34,6 @@
             this.EditMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.NewEmployee = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveEmployee = new System.Windows.Forms.ToolStripMenuItem();
-            this.ChangeSalary = new System.Windows.Forms.ToolStripMenuItem();
             this.ExportMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.EmployeeInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +49,7 @@
             // 
             this.menuStrip1.AutoSize = false;
             this.menuStrip1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(23, 23);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.началоToolStripMenuItem,
             this.EditMenu,
@@ -75,7 +75,7 @@
             // 
             this.изходToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Exit;
             this.изходToolStripMenuItem.Name = "изходToolStripMenuItem";
-            this.изходToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.изходToolStripMenuItem.Size = new System.Drawing.Size(159, 30);
             this.изходToolStripMenuItem.Text = "Изход";
             this.изходToolStripMenuItem.Click += new System.EventHandler(this.изходToolStripMenuItem_Click);
             // 
@@ -83,8 +83,7 @@
             // 
             this.EditMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.NewEmployee,
-            this.RemoveEmployee,
-            this.ChangeSalary});
+            this.RemoveEmployee});
             this.EditMenu.Image = global::ItSoft.Properties.Resources.Edit;
             this.EditMenu.Name = "EditMenu";
             this.EditMenu.Size = new System.Drawing.Size(93, 29);
@@ -95,7 +94,7 @@
             // 
             this.NewEmployee.Image = global::ItSoft.Properties.Resources.Users;
             this.NewEmployee.Name = "NewEmployee";
-            this.NewEmployee.Size = new System.Drawing.Size(228, 22);
+            this.NewEmployee.Size = new System.Drawing.Size(235, 30);
             this.NewEmployee.Text = "Нов Служител";
             this.NewEmployee.Click += new System.EventHandler(this.NewEmployee_Click);
             // 
@@ -103,17 +102,9 @@
             // 
             this.RemoveEmployee.Image = global::ItSoft.Properties.Resources.User;
             this.RemoveEmployee.Name = "RemoveEmployee";
-            this.RemoveEmployee.Size = new System.Drawing.Size(228, 22);
+            this.RemoveEmployee.Size = new System.Drawing.Size(235, 30);
             this.RemoveEmployee.Text = "Премахване на служител";
             this.RemoveEmployee.Click += new System.EventHandler(this.RemoveEmployee_Click);
-            // 
-            // ChangeSalary
-            // 
-            this.ChangeSalary.Image = global::ItSoft.Properties.Resources.OK;
-            this.ChangeSalary.Name = "ChangeSalary";
-            this.ChangeSalary.Size = new System.Drawing.Size(228, 22);
-            this.ChangeSalary.Text = "Промяна на заплата";
-            this.ChangeSalary.Click += new System.EventHandler(this.ChangeSalary_Click);
             // 
             // ExportMenu
             // 
@@ -129,7 +120,7 @@
             // 
             this.EmployeeInfo.Image = global::ItSoft.Properties.Resources.Diagram;
             this.EmployeeInfo.Name = "EmployeeInfo";
-            this.EmployeeInfo.Size = new System.Drawing.Size(236, 22);
+            this.EmployeeInfo.Size = new System.Drawing.Size(243, 30);
             this.EmployeeInfo.Text = "Информация за служители";
             this.EmployeeInfo.Click += new System.EventHandler(this.EmployeeInfo_Click);
             // 
@@ -147,7 +138,7 @@
             // 
             this.Authors.Image = global::ItSoft.Properties.Resources.User_group;
             this.Authors.Name = "Authors";
-            this.Authors.Size = new System.Drawing.Size(151, 22);
+            this.Authors.Size = new System.Drawing.Size(159, 30);
             this.Authors.Text = "За Авторите";
             this.Authors.Click += new System.EventHandler(this.Authors_Click);
             // 
@@ -155,7 +146,7 @@
             // 
             this.ProductInfo.Image = global::ItSoft.Properties.Resources.Application_form;
             this.ProductInfo.Name = "ProductInfo";
-            this.ProductInfo.Size = new System.Drawing.Size(151, 22);
+            this.ProductInfo.Size = new System.Drawing.Size(159, 30);
             this.ProductInfo.Text = "За Продукта";
             this.ProductInfo.Click += new System.EventHandler(this.ProductInfo_Click);
             // 
@@ -208,7 +199,6 @@
         private System.Windows.Forms.ToolStripMenuItem RemoveEmployee;
         private System.Windows.Forms.ToolStripMenuItem HelpMenu;
         private System.Windows.Forms.ToolStripMenuItem Authors;
-        private System.Windows.Forms.ToolStripMenuItem ChangeSalary;
         private System.Windows.Forms.ToolStripMenuItem ExportMenu;
         private System.Windows.Forms.ToolStripMenuItem EmployeeInfo;
         private System.Windows.Forms.ToolStripMenuItem ProductInfo;

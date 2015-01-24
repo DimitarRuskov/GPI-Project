@@ -241,7 +241,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(23, 23);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
@@ -250,7 +250,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(908, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(908, 28);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -262,7 +262,7 @@
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Brick_house;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.fileToolStripMenuItem.Text = "&Начало";
             // 
             // saveToolStripMenuItem
@@ -271,7 +271,7 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -280,7 +280,7 @@
             this.exitToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Exit;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -293,7 +293,7 @@
             this.toolStripSeparator4});
             this.editToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Edit;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
             this.editToolStripMenuItem.Text = "&Редакция";
             // 
             // AddToolStripMenuItem
@@ -302,7 +302,7 @@
             this.AddToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddToolStripMenuItem.Name = "AddToolStripMenuItem";
             this.AddToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.AddToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.AddToolStripMenuItem.Size = new System.Drawing.Size(182, 30);
             this.AddToolStripMenuItem.Text = "Ad&d Row";
             this.AddToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
             // 
@@ -312,7 +312,7 @@
             this.InsertToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.InsertToolStripMenuItem.Name = "InsertToolStripMenuItem";
             this.InsertToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.InsertToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.InsertToolStripMenuItem.Size = new System.Drawing.Size(182, 30);
             this.InsertToolStripMenuItem.Text = "&Insert Row";
             this.InsertToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
@@ -322,14 +322,14 @@
             this.DeleteToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem";
             this.DeleteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(182, 30);
             this.DeleteToolStripMenuItem.Text = "&Delete Row";
             this.DeleteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(176, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(179, 6);
             // 
             // toolsToolStripMenuItem
             // 
@@ -337,7 +337,7 @@
             this.optionsToolStripMenuItem});
             this.toolsToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Notes;
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.toolsToolStripMenuItem.Text = "&Справка";
             // 
             // optionsToolStripMenuItem
@@ -345,7 +345,7 @@
             this.optionsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("optionsToolStripMenuItem.Image")));
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
             this.optionsToolStripMenuItem.Text = "&Export to Excel";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
@@ -355,14 +355,14 @@
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Help;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.helpToolStripMenuItem.Text = "&Контакти";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Properties;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.aboutToolStripMenuItem.Text = "&Автори";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -370,11 +370,11 @@
             // 
             this.ExportButton.AutoSize = true;
             this.ExportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ExportButton.Image = global::ItSoft.Properties.Resources.Blue_arrow;
+            this.ExportButton.Image = global::ItSoft.Properties.Resources.Export;
             this.ExportButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ExportButton.Location = new System.Drawing.Point(514, 401);
+            this.ExportButton.Location = new System.Drawing.Point(514, 413);
             this.ExportButton.Name = "ExportButton";
-            this.ExportButton.Size = new System.Drawing.Size(127, 54);
+            this.ExportButton.Size = new System.Drawing.Size(119, 44);
             this.ExportButton.TabIndex = 4;
             this.ExportButton.Text = "Експорт";
             this.ExportButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -384,11 +384,11 @@
             // ExitButton
             // 
             this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ExitButton.Image = global::ItSoft.Properties.Resources.Exit1;
+            this.ExitButton.Image = global::ItSoft.Properties.Resources.Exit2;
             this.ExitButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ExitButton.Location = new System.Drawing.Point(780, 402);
+            this.ExitButton.Location = new System.Drawing.Point(780, 414);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(113, 53);
+            this.ExitButton.Size = new System.Drawing.Size(113, 43);
             this.ExitButton.TabIndex = 3;
             this.ExitButton.Text = "Изход";
             this.ExitButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -398,11 +398,11 @@
             // SaveButton
             // 
             this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SaveButton.Image = global::ItSoft.Properties.Resources.User1;
+            this.SaveButton.Image = global::ItSoft.Properties.Resources.Apply;
             this.SaveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SaveButton.Location = new System.Drawing.Point(656, 402);
+            this.SaveButton.Location = new System.Drawing.Point(652, 414);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(108, 53);
+            this.SaveButton.Size = new System.Drawing.Size(108, 43);
             this.SaveButton.TabIndex = 2;
             this.SaveButton.Text = "Запази";
             this.SaveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
