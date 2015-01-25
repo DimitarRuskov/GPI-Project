@@ -36,15 +36,6 @@ namespace ItSoft
                 dataGridView1.Rows.Insert(this.dataGridView1.SelectedRows[0].Index);
             }
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
         private void deleteRowToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridView1.SelectedRows)
@@ -245,5 +236,6 @@ namespace ItSoft
         {
 
         }
+
     }
 }

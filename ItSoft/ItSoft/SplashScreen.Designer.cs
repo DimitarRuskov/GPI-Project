@@ -46,14 +46,17 @@
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label1.Name = "label1";
+            this.label1.UseCompatibleTextRendering = true;
             // 
             // loadingBar
             // 
             this.loadingBar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.loadingBar.ForeColor = System.Drawing.Color.DodgerBlue;
             resources.ApplyResources(this.loadingBar, "loadingBar");
+            this.loadingBar.ForeColor = System.Drawing.Color.DodgerBlue;
             this.loadingBar.Name = "loadingBar";
+            this.loadingBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.loadingBar.Click += new System.EventHandler(this.loadingBar_Click);
             // 
             // pictureBox1

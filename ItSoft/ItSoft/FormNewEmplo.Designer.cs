@@ -88,7 +88,7 @@
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Home;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(84, 27);
             this.fileToolStripMenuItem.Text = "&Начало";
             // 
             // newToolStripMenuItem
@@ -97,7 +97,7 @@
             this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(159, 30);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.newToolStripMenuItem.Text = "&New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
@@ -107,20 +107,20 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(159, 30);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(156, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(138, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Exit;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(159, 30);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -131,14 +131,14 @@
             this.optionsToolStripMenuItem});
             this.toolsToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Notes;
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(93, 27);
             this.toolsToolStripMenuItem.Text = "&Редакция";
             // 
             // EmploInfoToolStripMenuItem
             // 
             this.EmploInfoToolStripMenuItem.Image = global::ItSoft.Properties.Resources.User_group;
             this.EmploInfoToolStripMenuItem.Name = "EmploInfoToolStripMenuItem";
-            this.EmploInfoToolStripMenuItem.Size = new System.Drawing.Size(232, 30);
+            this.EmploInfoToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.EmploInfoToolStripMenuItem.Text = "&Информация за служители";
             this.EmploInfoToolStripMenuItem.Click += new System.EventHandler(this.customizeToolStripMenuItem_Click);
             // 
@@ -146,7 +146,7 @@
             // 
             this.optionsToolStripMenuItem.Image = global::ItSoft.Properties.Resources.User;
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(232, 30);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.optionsToolStripMenuItem.Text = "&Изтриване на служител";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
@@ -157,14 +157,14 @@
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Help;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(92, 27);
             this.helpToolStripMenuItem.Text = "&Контакти";
             // 
             // authorsToolStripMenuItem
             // 
             this.authorsToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Notes;
             this.authorsToolStripMenuItem.Name = "authorsToolStripMenuItem";
-            this.authorsToolStripMenuItem.Size = new System.Drawing.Size(159, 30);
+            this.authorsToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.authorsToolStripMenuItem.Text = "&Автори";
             this.authorsToolStripMenuItem.Click += new System.EventHandler(this.authorsToolStripMenuItem_Click);
             // 
@@ -172,7 +172,7 @@
             // 
             this.aboutToolStripMenuItem.Image = global::ItSoft.Properties.Resources.OK;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(159, 30);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.aboutToolStripMenuItem.Text = "&За Продукта";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -363,12 +363,11 @@
             this.professionText.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.professionText.FormattingEnabled = true;
             this.professionText.Items.AddRange(new object[] {
-            "QA инженер",
-            "Java програмист",
-            "Android програмист",
-            "Web програмист",
-            "Java програмист",
-            "Системен администратор",
+            "QA Инженер",
+            "Java Програмист",
+            "Android Програмист",
+            "Web Програмист",
+            "Системен Администратор",
             "Стажант"});
             this.professionText.Location = new System.Drawing.Point(14, 49);
             this.professionText.Name = "professionText";
@@ -413,6 +412,7 @@
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormNewEmplo";
             this.Text = "Добавяне на нов служител";

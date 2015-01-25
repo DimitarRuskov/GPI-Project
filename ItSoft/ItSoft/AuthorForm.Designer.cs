@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthorForm));
             this.AuthorDimityr = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBoxDimityr = new System.Windows.Forms.PictureBox();
             this.AuthorGeorge = new System.Windows.Forms.GroupBox();
-            this.pictureBoxGeorge = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBoxGeorge = new System.Windows.Forms.PictureBox();
             this.AuthorDimityr.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDimityr)).BeginInit();
             this.AuthorGeorge.SuspendLayout();
@@ -54,6 +55,25 @@
             this.AuthorDimityr.TabIndex = 0;
             this.AuthorDimityr.TabStop = false;
             this.AuthorDimityr.Text = "Димитър Русков";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(190, 80);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 21);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "1401682003";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(168, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 21);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Факултетен номер";
             // 
             // pictureBoxDimityr
             // 
@@ -79,15 +99,14 @@
             this.AuthorGeorge.TabStop = false;
             this.AuthorGeorge.Text = "Георги Марушков";
             // 
-            // pictureBoxGeorge
+            // label3
             // 
-            this.pictureBoxGeorge.Image = global::ItSoft.Properties.Resources.g;
-            this.pictureBoxGeorge.Location = new System.Drawing.Point(17, 40);
-            this.pictureBoxGeorge.Name = "pictureBoxGeorge";
-            this.pictureBoxGeorge.Size = new System.Drawing.Size(83, 83);
-            this.pictureBoxGeorge.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxGeorge.TabIndex = 1;
-            this.pictureBoxGeorge.TabStop = false;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(190, 79);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 21);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "1401682019";
             // 
             // label1
             // 
@@ -99,33 +118,15 @@
             this.label1.Text = "Факултетен номер";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // label2
+            // pictureBoxGeorge
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(168, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Факултетен номер";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(190, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 21);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "1401682019";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(190, 80);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 21);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "1401682003";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.pictureBoxGeorge.Image = global::ItSoft.Properties.Resources.g;
+            this.pictureBoxGeorge.Location = new System.Drawing.Point(17, 40);
+            this.pictureBoxGeorge.Name = "pictureBoxGeorge";
+            this.pictureBoxGeorge.Size = new System.Drawing.Size(83, 83);
+            this.pictureBoxGeorge.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxGeorge.TabIndex = 1;
+            this.pictureBoxGeorge.TabStop = false;
             // 
             // AuthorForm
             // 
@@ -134,6 +135,7 @@
             this.ClientSize = new System.Drawing.Size(437, 377);
             this.Controls.Add(this.AuthorGeorge);
             this.Controls.Add(this.AuthorDimityr);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AuthorForm";
             this.Text = "Автори";
             this.Load += new System.EventHandler(this.AuthorForm_Load);
