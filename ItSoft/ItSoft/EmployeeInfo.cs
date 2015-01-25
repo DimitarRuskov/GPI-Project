@@ -64,7 +64,7 @@ namespace ItSoft
             employeer.Columns.Add(new DataColumn("Фамилия", typeof(string)));
             employeer.Columns.Add(new DataColumn("Професия", typeof(string)));
             employeer.Columns.Add(new DataColumn("Отдел", typeof(string)));
-            employeer.Columns.Add(new DataColumn("Заплата", typeof(int)));
+            employeer.Columns.Add(new DataColumn("Заплата*", typeof(int)));
             employeer.Columns.Add(new DataColumn("Дата на постъпване", typeof(int)));
 
             DataSet ds = new DataSet();
@@ -239,6 +239,11 @@ namespace ItSoft
 
         private void printPreviewToolStripMenuItem_Click(object sender, EventArgs e)
         {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

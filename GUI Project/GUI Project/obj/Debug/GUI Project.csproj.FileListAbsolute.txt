@@ -1,9 +1,0 @@
-C:\Users\rawket\Desktop\GUI\GPI-Project\GUI Project\GUI Project\bin\Debug\GUI Project.exe.config
-C:\Users\rawket\Desktop\GUI\GPI-Project\GUI Project\GUI Project\bin\Debug\GUI Project.exe
-C:\Users\rawket\Desktop\GUI\GPI-Project\GUI Project\GUI Project\bin\Debug\GUI Project.pdb
-C:\Users\rawket\Desktop\GUI\GPI-Project\GUI Project\GUI Project\obj\Debug\GUI Project.csprojResolveAssemblyReference.cache
-C:\Users\rawket\Desktop\GUI\GPI-Project\GUI Project\GUI Project\obj\Debug\GUI_Project.NewEmployee.resources
-C:\Users\rawket\Desktop\GUI\GPI-Project\GUI Project\GUI Project\obj\Debug\GUI_Project.Properties.Resources.resources
-C:\Users\rawket\Desktop\GUI\GPI-Project\GUI Project\GUI Project\obj\Debug\GUI Project.csproj.GenerateResource.Cache
-C:\Users\rawket\Desktop\GUI\GPI-Project\GUI Project\GUI Project\obj\Debug\GUI Project.exe
-C:\Users\rawket\Desktop\GUI\GPI-Project\GUI Project\GUI Project\obj\Debug\GUI Project.pdb
