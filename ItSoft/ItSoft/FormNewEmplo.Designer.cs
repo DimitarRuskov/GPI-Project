@@ -186,6 +186,7 @@
             this.NewEmpGroupBox.Controls.Add(this.име);
             this.NewEmpGroupBox.Controls.Add(this.egnText);
             this.NewEmpGroupBox.Controls.Add(this.ID);
+            this.NewEmpGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NewEmpGroupBox.Location = new System.Drawing.Point(28, 44);
             this.NewEmpGroupBox.Name = "NewEmpGroupBox";
             this.NewEmpGroupBox.Size = new System.Drawing.Size(640, 160);
@@ -217,7 +218,7 @@
             // 
             this.familyNameText.Location = new System.Drawing.Point(437, 51);
             this.familyNameText.Name = "familyNameText";
-            this.familyNameText.Size = new System.Drawing.Size(188, 20);
+            this.familyNameText.Size = new System.Drawing.Size(188, 22);
             this.familyNameText.TabIndex = 37;
             this.familyNameText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.familyNameText_KeyPress);
             // 
@@ -225,7 +226,7 @@
             // 
             this.middleNameText.Location = new System.Drawing.Point(226, 51);
             this.middleNameText.Name = "middleNameText";
-            this.middleNameText.Size = new System.Drawing.Size(188, 20);
+            this.middleNameText.Size = new System.Drawing.Size(188, 22);
             this.middleNameText.TabIndex = 36;
             this.middleNameText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.middleNameText_KeyPress);
             // 
@@ -233,7 +234,7 @@
             // 
             this.nameText.Location = new System.Drawing.Point(14, 51);
             this.nameText.Name = "nameText";
-            this.nameText.Size = new System.Drawing.Size(188, 20);
+            this.nameText.Size = new System.Drawing.Size(188, 22);
             this.nameText.TabIndex = 35;
             this.nameText.TextChanged += new System.EventHandler(this.nameText_TextChanged);
             this.nameText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameText_KeyPress);
@@ -253,7 +254,7 @@
             // 
             this.egnText.Location = new System.Drawing.Point(15, 125);
             this.egnText.Name = "egnText";
-            this.egnText.Size = new System.Drawing.Size(188, 20);
+            this.egnText.Size = new System.Drawing.Size(188, 22);
             this.egnText.TabIndex = 33;
             this.egnText.Validating += new System.ComponentModel.CancelEventHandler(this.egnText_Validating);
             // 
@@ -293,7 +294,8 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(188, 22);
             this.dateTimePicker1.TabIndex = 43;
-            this.dateTimePicker1.Value = new System.DateTime(2015, 1, 18, 15, 38, 21, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2015, 1, 26, 0, 0, 0, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // LabelDateOfStart
             // 

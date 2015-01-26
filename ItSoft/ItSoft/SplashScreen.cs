@@ -20,8 +20,8 @@ namespace ItSoft
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-           loadingBarProgress();
-           this.Close();
+            loadingBarProgress();
+            this.Close();
 
         }
 
@@ -46,7 +46,7 @@ namespace ItSoft
 
         private void SplashScreen_Load(object sender, EventArgs e)
         {
-      
+
         }
     }
 }

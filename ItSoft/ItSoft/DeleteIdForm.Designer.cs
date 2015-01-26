@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IDDeleteForm));
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.labelDeletedForm = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ExitButton = new System.Windows.Forms.Button();
@@ -41,24 +39,19 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.справкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.EmployeerInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.authorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.formNewEmploBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.formNewEmploBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
             // 
             // labelDeletedForm
             // 
             this.labelDeletedForm.AutoSize = true;
             this.labelDeletedForm.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDeletedForm.Location = new System.Drawing.Point(57, 34);
+            this.labelDeletedForm.Location = new System.Drawing.Point(77, 38);
             this.labelDeletedForm.Name = "labelDeletedForm";
             this.labelDeletedForm.Size = new System.Drawing.Size(285, 23);
             this.labelDeletedForm.TabIndex = 6;
@@ -70,9 +63,9 @@
             this.groupBox1.Controls.Add(this.labelDeleteForm);
             this.groupBox1.Controls.Add(this.idToDelete);
             this.groupBox1.Controls.Add(this.IDDelete);
-            this.groupBox1.Location = new System.Drawing.Point(21, 63);
+            this.groupBox1.Location = new System.Drawing.Point(23, 69);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(361, 174);
+            this.groupBox1.Size = new System.Drawing.Size(386, 183);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Секция за изтриване";
@@ -129,10 +122,11 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(23, 23);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
+            this.справкиToolStripMenuItem,
             this.authorsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(409, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(429, 31);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -143,7 +137,7 @@
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Home;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(84, 27);
             this.fileToolStripMenuItem.Text = "&Начало";
             // 
             // saveToolStripMenuItem
@@ -165,13 +159,31 @@
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // справкиToolStripMenuItem
+            // 
+            this.справкиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.EmployeerInfoToolStripMenuItem});
+            this.справкиToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Notes;
+            this.справкиToolStripMenuItem.Name = "справкиToolStripMenuItem";
+            this.справкиToolStripMenuItem.Size = new System.Drawing.Size(89, 27);
+            this.справкиToolStripMenuItem.Text = "&Справки";
+            // 
+            // EmployeerInfoToolStripMenuItem
+            // 
+            this.EmployeerInfoToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Properties;
+            this.EmployeerInfoToolStripMenuItem.Name = "EmployeerInfoToolStripMenuItem";
+            this.EmployeerInfoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
+            this.EmployeerInfoToolStripMenuItem.Size = new System.Drawing.Size(278, 30);
+            this.EmployeerInfoToolStripMenuItem.Text = "Информация за служители";
+            this.EmployeerInfoToolStripMenuItem.Click += new System.EventHandler(this.EmployeerInfoToolStripMenuItem_Click);
+            // 
             // authorsToolStripMenuItem
             // 
             this.authorsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.authorsToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Help;
             this.authorsToolStripMenuItem.Name = "authorsToolStripMenuItem";
-            this.authorsToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.authorsToolStripMenuItem.Size = new System.Drawing.Size(92, 27);
             this.authorsToolStripMenuItem.Text = "&Контакти";
             // 
             // aboutToolStripMenuItem
@@ -182,15 +194,11 @@
             this.aboutToolStripMenuItem.Text = "&Автори";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // formNewEmploBindingSource
-            // 
-            this.formNewEmploBindingSource.DataSource = typeof(ItSoft.FormNewEmplo);
-            // 
             // IDDeleteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(409, 244);
+            this.ClientSize = new System.Drawing.Size(429, 266);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelDeletedForm);
             this.Controls.Add(this.menuStrip1);
@@ -203,7 +211,6 @@
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.formNewEmploBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,8 +218,6 @@
 
         #endregion
 
-        private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.BindingSource formNewEmploBindingSource;
         private System.Windows.Forms.Label labelDeletedForm;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox idToDelete;
@@ -225,6 +230,8 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem authorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem справкиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem EmployeerInfoToolStripMenuItem;
 
     }
 }

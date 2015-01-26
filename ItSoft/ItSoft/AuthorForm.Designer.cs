@@ -49,7 +49,7 @@
             this.AuthorDimityr.Controls.Add(this.label2);
             this.AuthorDimityr.Controls.Add(this.pictureBoxDimityr);
             this.AuthorDimityr.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AuthorDimityr.Location = new System.Drawing.Point(23, 205);
+            this.AuthorDimityr.Location = new System.Drawing.Point(23, 196);
             this.AuthorDimityr.Name = "AuthorDimityr";
             this.AuthorDimityr.Size = new System.Drawing.Size(392, 160);
             this.AuthorDimityr.TabIndex = 0;
@@ -92,7 +92,7 @@
             this.AuthorGeorge.Controls.Add(this.label1);
             this.AuthorGeorge.Controls.Add(this.pictureBoxGeorge);
             this.AuthorGeorge.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AuthorGeorge.Location = new System.Drawing.Point(23, 23);
+            this.AuthorGeorge.Location = new System.Drawing.Point(23, 12);
             this.AuthorGeorge.Name = "AuthorGeorge";
             this.AuthorGeorge.Size = new System.Drawing.Size(392, 161);
             this.AuthorGeorge.TabIndex = 1;

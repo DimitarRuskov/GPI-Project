@@ -29,18 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeInfo));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteRowToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cutRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.InsertRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addRowToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmployeeGroupBox = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -59,14 +67,6 @@
             this.ExportButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.EmployeeGroupBox.SuspendLayout();
@@ -82,7 +82,7 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deleteRowToolStripMenuItem1,
-            this.cutRowToolStripMenuItem,
+            this.InsertRowToolStripMenuItem,
             this.addRowToolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(134, 70);
@@ -95,13 +95,13 @@
             this.deleteRowToolStripMenuItem1.Text = "Delete Row";
             this.deleteRowToolStripMenuItem1.Click += new System.EventHandler(this.deleteRowToolStripMenuItem1_Click);
             // 
-            // cutRowToolStripMenuItem
+            // InsertRowToolStripMenuItem
             // 
-            this.cutRowToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Add_to_basket;
-            this.cutRowToolStripMenuItem.Name = "cutRowToolStripMenuItem";
-            this.cutRowToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.cutRowToolStripMenuItem.Text = "Insert Row";
-            this.cutRowToolStripMenuItem.Click += new System.EventHandler(this.cutRowToolStripMenuItem_Click);
+            this.InsertRowToolStripMenuItem.Image = global::ItSoft.Properties.Resources.Add_to_basket;
+            this.InsertRowToolStripMenuItem.Name = "InsertRowToolStripMenuItem";
+            this.InsertRowToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.InsertRowToolStripMenuItem.Text = "Insert Row";
+            this.InsertRowToolStripMenuItem.Click += new System.EventHandler(this.insertRowToolStripMenuItem_Click);
             // 
             // addRowToolStripMenuItem1
             // 
@@ -109,7 +109,7 @@
             this.addRowToolStripMenuItem1.Name = "addRowToolStripMenuItem1";
             this.addRowToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
             this.addRowToolStripMenuItem1.Text = "Add Row";
-            this.addRowToolStripMenuItem1.Click += new System.EventHandler(this.addRowToolStripMenuItem1_Click);
+            this.addRowToolStripMenuItem1.Click += new System.EventHandler(this.AddRowToolStripMenuItem1_Click);
             // 
             // deleteRowToolStripMenuItem
             // 
@@ -156,9 +156,81 @@
             this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.AlphaFull;
             this.dataGridView1.Location = new System.Drawing.Point(17, 27);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(848, 292);
+            this.dataGridView1.Size = new System.Drawing.Size(920, 292);
             this.dataGridView1.StandardTab = true;
             this.dataGridView1.TabIndex = 2;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.ContextMenuStrip = this.contextMenuStrip1;
+            this.Column1.HeaderText = "ЕГН";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 61;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.HeaderText = "Име";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 60;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column3.HeaderText = "Презиме";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 92;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column4.HeaderText = "Фамилия";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 92;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column5.HeaderText = "Професия";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column6.HeaderText = "Отдел";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 74;
+            // 
+            // Salary
+            // 
+            this.Salary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Salary.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Salary.HeaderText = "Заплата*";
+            this.Salary.Name = "Salary";
+            this.Salary.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Salary.ToolTipText = "Редакция на заплата (F2)";
+            this.Salary.Width = 94;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.Format = "D";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Column8.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column8.HeaderText = "Дата на постъпване";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 151;
             // 
             // EmployeeGroupBox
             // 
@@ -167,7 +239,7 @@
             this.EmployeeGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.EmployeeGroupBox.Location = new System.Drawing.Point(12, 38);
             this.EmployeeGroupBox.Name = "EmployeeGroupBox";
-            this.EmployeeGroupBox.Size = new System.Drawing.Size(881, 354);
+            this.EmployeeGroupBox.Size = new System.Drawing.Size(953, 354);
             this.EmployeeGroupBox.TabIndex = 5;
             this.EmployeeGroupBox.TabStop = false;
             this.EmployeeGroupBox.Text = "Справка и обработка на информация";
@@ -192,8 +264,8 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(908, 31);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(977, 31);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -247,7 +319,7 @@
             this.AddToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.AddToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.AddToolStripMenuItem.Text = "Ad&d Row";
-            this.AddToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
+            this.AddToolStripMenuItem.Click += new System.EventHandler(this.AddRowToolStripMenuItem1_Click);
             // 
             // InsertToolStripMenuItem
             // 
@@ -257,7 +329,7 @@
             this.InsertToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
             this.InsertToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.InsertToolStripMenuItem.Text = "&Insert Row";
-            this.InsertToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
+            this.InsertToolStripMenuItem.Click += new System.EventHandler(this.InsertToolStripMenuItem_Click);
             // 
             // DeleteToolStripMenuItem
             // 
@@ -267,7 +339,7 @@
             this.DeleteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
             this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.DeleteToolStripMenuItem.Text = "&Delete Row";
-            this.DeleteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
+            this.DeleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
@@ -352,83 +424,11 @@
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.ContextMenuStrip = this.contextMenuStrip1;
-            this.Column1.HeaderText = "ЕГН";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 61;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.HeaderText = "Име";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 60;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column3.HeaderText = "Презиме";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 92;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column4.HeaderText = "Фамилия";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 92;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column5.HeaderText = "Професия";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column6.HeaderText = "Отдел";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 74;
-            // 
-            // Salary
-            // 
-            this.Salary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Salary.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Salary.HeaderText = "Заплата*";
-            this.Salary.Name = "Salary";
-            this.Salary.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Salary.ToolTipText = "Редакция на заплата (F2)";
-            this.Salary.Width = 94;
-            // 
-            // Column8
-            // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Column8.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column8.HeaderText = "Дата на постъпване";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 151;
-            // 
             // EmployeeInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 480);
+            this.ClientSize = new System.Drawing.Size(977, 480);
             this.Controls.Add(this.ExportButton);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.SaveButton);
@@ -462,7 +462,7 @@
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button ExportButton;
         private System.Windows.Forms.ToolStripMenuItem deleteRowToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem cutRowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem InsertRowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addRowToolStripMenuItem1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;

@@ -89,7 +89,7 @@
     <Compile Include="FormNewEmplo.Designer.cs">
       <DependentUpon>FormNewEmplo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="ItSoft.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SoftwareForm.cs">
       <SubType>Form</SubType>

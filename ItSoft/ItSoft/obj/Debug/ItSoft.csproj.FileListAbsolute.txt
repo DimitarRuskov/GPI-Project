@@ -90,7 +90,6 @@ C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\obj\Debug\ItSoft.MainForm.resourc
 C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\obj\Debug\ItSoft.FormNewEmplo.resources
 C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\obj\Debug\ItSoft.Properties.Resources.resources
 C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\obj\Debug\ItSoft.csproj.GenerateResource.Cache
-C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\bin\Debug\ClosedXML.dll
 C:\Users\George\Desktop\ItSoft\ItSoft\ItSoft\obj\Debug\ItSoft.SoftwareForm.resources
 C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\bin\Debug\ClosedXML.dll
 C:\Users\marushkg\Desktop\GitHub\ItSoft\ItSoft\obj\Debug\ItSoft.SoftwareForm.resources

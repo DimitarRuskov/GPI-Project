@@ -12,48 +12,45 @@ namespace ItSoft
         }
 
         public void EmployerrDelete()
-    {
-        string idDelete = idToDelete.Text;
-        if (idDelete.Length <= 3)
         {
-            MessageBox.Show("ЕГН-то, което въведохте е прекалено кратко!", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            return;
-        }
-
-        StreamReader sr = new StreamReader("employees.txt");
-        string allData = sr.ReadToEnd();
-        sr.Close();
-        StreamWriter sw = new StreamWriter("employees.txt", false);
-        string[] employeesData = allData.Split('\n');
-        bool isMatch = false;
-
-        foreach (var data in employeesData)
-        {
-            string[] employee = data.Split('%');
-
-            if (employee[0] != idDelete)
+            string idDelete = idToDelete.Text;
+            if (idDelete.Length <= 3)
             {
-                sw.WriteLine(data);
+                MessageBox.Show("ЕГН-то, което въведохте е прекалено кратко!", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            StreamReader sr = new StreamReader("employees.txt");
+            string allData = sr.ReadToEnd();
+            sr.Close();
+            StreamWriter sw = new StreamWriter("employees.txt", false);
+            string[] employeesData = allData.Split('\n');
+            bool isMatch = false;
+
+            foreach (var data in employeesData)
+            {
+                string[] employee = data.Split('%');
+
+                if (employee[0] != idDelete)
+                {
+                    sw.WriteLine(data);
+                }
+                else
+                {
+                    isMatch = true;
+                }
+            }
+
+            sw.Close();
+            if (isMatch)
+            {
+                MessageBox.Show("Вие успешно премахнахте служител с ЕГН: " + idDelete, "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                isMatch = true;
+                MessageBox.Show("Служител с ЕГН: " + idDelete + " не е открит!", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        sw.Close();
-        if (isMatch)
-        {
-            MessageBox.Show("Вие успешно премахнахте служител с ЕГН: " + idDelete, "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-        }
-        else
-        {
-            MessageBox.Show("Служител с ЕГН: " + idDelete + " не е открит!", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-    }
         private void IDDelete_Click(object sender, System.EventArgs e)
         {
             EmployerrDelete();
@@ -90,6 +87,17 @@ namespace ItSoft
         private void exitToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             this.Close();
+        }
+
+        private void InfoToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void EmployeerInfoToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            EmployeeInfo emploInfo = new EmployeeInfo();
+            emploInfo.Show();
         }
     }
 }

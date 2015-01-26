@@ -23,29 +23,6 @@ namespace ItSoft
         private void saveButton_Click(object sender, EventArgs e)
         {
             saveButton_Click();
-            //if (!validateFields())
-            //{
-            //    return;
-            //}
-
-            //string egn = egnText.Text;
-            //string name = nameText.Text;
-            //string middleName = middleNameText.Text;
-            //string familyName = familyNameText.Text;
-            //string profession = professionText.Text;
-            //string department = departmentText.Text;
-            //var payment = paymentText.Text;
-
-            //string dateStart = dateTimePicker1.Text;
-
-            //const string sPath = "employees.txt";
-
-            //string employee = egn + "%" + name + "%" + middleName + "%" + familyName + "%" + profession + "%" + department + "%" + payment + "%" + dateStart;
-            //TextWriter tw = new StreamWriter(sPath, true);
-            //tw.WriteLine(employee);
-            //tw.Close();
-
-            //MessageBox.Show("Служителят записан успешно!", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void saveButton_Click()
@@ -62,7 +39,6 @@ namespace ItSoft
             string profession = professionText.Text;
             string department = departmentText.Text;
             var payment = paymentText.Text;
-
             string dateStart = dateTimePicker1.Text;
 
             const string sPath = "employees.txt";
@@ -73,8 +49,6 @@ namespace ItSoft
             tw.Close();
 
             MessageBox.Show("Служителят записан успешно!", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
         }
 
         private bool validateFields()
@@ -121,7 +95,6 @@ namespace ItSoft
                 MessageBox.Show("Моля изберете отдел!", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
-
             return true;
         }
 
@@ -133,7 +106,6 @@ namespace ItSoft
         private void egnText_TextChanged(object sender, EventArgs e)
         {
         }
-
         private void paymentText_TextChanged(object sender, EventArgs e)
         {
             try
@@ -144,8 +116,6 @@ namespace ItSoft
             catch (FormatException)
             {
                 MessageBox.Show("Въведете коректни стойности за поле 'Заплата'", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
             }
         }
 
@@ -155,12 +125,6 @@ namespace ItSoft
 
         private void textBoxDateOfStart_TextChanged(object sender, EventArgs e)
         {
-        }
-
-        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
-        {
-            DateTime date = this.dateTimePicker1.Value;
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
         }
 
         private void startDateText_DateChanged(object sender, DateRangeEventArgs e)
@@ -194,10 +158,10 @@ namespace ItSoft
 
         private void nameText_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsLetter(e.KeyChar))
+            if (!Char.IsLetter(e.KeyChar) && !Char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Въведи коректни данни", "Невалиден Символ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Моля въведи коректни символи !", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 nameText.Clear();
             }
             
@@ -206,20 +170,20 @@ namespace ItSoft
 
         private void middleNameText_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsLetter(e.KeyChar))
+            if (!Char.IsLetter(e.KeyChar) && !Char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Въведи коректни данни", "Невалиден Символ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Моля въведи коректни символи !", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 middleNameText.Clear();
             }
         }
 
         private void familyNameText_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsLetter(e.KeyChar))
+            if (!Char.IsLetter(e.KeyChar) && !Char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Въведи коректни данни", "Невалиден Символ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Моля въведи коректни символи !", "Предупреждение ИТСофт", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 familyNameText.Clear();
             }
         }
@@ -232,6 +196,8 @@ namespace ItSoft
 
         private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            IDDeleteForm delEmplo = new IDDeleteForm();
+            delEmplo.Show();
         }
 
         private void authorsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -243,7 +209,6 @@ namespace ItSoft
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SoftwareForm softFrm = new SoftwareForm();
-
             softFrm.Show();
         }
 
@@ -261,6 +226,12 @@ namespace ItSoft
         {
             FormNewEmplo newEmp = new FormNewEmplo();
             newEmp.Show();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime date = this.dateTimePicker1.Value;
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
         }
     }
 }

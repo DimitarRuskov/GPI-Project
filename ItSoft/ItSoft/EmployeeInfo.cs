@@ -14,41 +14,10 @@ namespace ItSoft
         public EmployeeInfo()
         {
             InitializeComponent();
-            ReadFromFile();
         }
-
-        public void ReadFromFile()
-        {
-        }
-
-        private void addRowToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            if (this.dataGridView1.SelectedRows.Count > 0)
-            {
-                dataGridView1.Rows.Add(this.dataGridView1.SelectedRows.Count);
-            }
-        }
-
-        private void cutRowToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (this.dataGridView1.SelectedRows.Count > 0)
-            {
-                dataGridView1.Rows.Insert(this.dataGridView1.SelectedRows[0].Index);
-            }
-        }
-        private void deleteRowToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
-            {
-                if (!row.IsNewRow)
-                    dataGridView1.Rows.Remove(row);
-            }
-        }
-
         private void EmployeeInfo_Load(object sender, EventArgs e)
         {
             DataTable employeer = new DataTable("Employeer");
-
             employeer.Columns.Add(new DataColumn("ЕГН", typeof(long)));
             employeer.Columns.Add(new DataColumn("Име", typeof(string)));
             employeer.Columns.Add(new DataColumn("Презиме", typeof(string)));
@@ -105,10 +74,6 @@ namespace ItSoft
         {
         }
 
-        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-        }
-
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -119,17 +84,39 @@ namespace ItSoft
             SaveButton_Click();
         }
 
-        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (this.dataGridView1.SelectedRows.Count > 0)
-            {
-                dataGridView1.Rows.Add(this.dataGridView1.SelectedRows.Count);
-            }
-        }
-
         private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExportButton_Click();
+        }
+
+        private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteButton();
+        }
+
+        private void InsertToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InsertButton();
+        }
+
+        private void AddRowToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AddButton();
+        }
+
+        private void addRowToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AddButton();
+        }
+
+        private void insertRowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InsertButton();
+        }
+
+        private void deleteRowToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DeleteButton();
         }
 
         private void ExportButton_Click()
@@ -160,6 +147,7 @@ namespace ItSoft
             saveDlg.FilterIndex = 0;
             saveDlg.RestoreDirectory = true;
             saveDlg.Title = "Export Excel File To";
+
             if (saveDlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 string path = saveDlg.FileName;
@@ -205,7 +193,7 @@ namespace ItSoft
             }
         }
 
-        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        public void DeleteButton()
         {
             foreach (DataGridViewRow row in dataGridView1.SelectedRows)
             {
@@ -214,7 +202,7 @@ namespace ItSoft
             }
         }
 
-        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        public void InsertButton()
         {
             if (this.dataGridView1.SelectedRows.Count > 0)
             {
@@ -222,14 +210,18 @@ namespace ItSoft
             }
         }
 
+        public void AddButton()
+        {
+            if (this.dataGridView1.SelectedRows.Count > 0)
+            {
+                dataGridView1.Rows.Add(this.dataGridView1.SelectedRows.Count);
+            }
+        }
+
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AuthorForm authors = new AuthorForm();
             authors.ShowDialog();
-        }
-
-        private void printPreviewToolStripMenuItem_Click(object sender, EventArgs e)
-        {
         }
 
         private void label1_Click(object sender, EventArgs e)
